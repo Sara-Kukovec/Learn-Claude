@@ -124,8 +124,9 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 .infographic-row { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
 .infographic-img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border-light); background: var(--bg-white); }
 .infographic-caption { font-size: 0.72rem; color: var(--text-faint); font-family: var(--font-mono); text-align: center; margin-top: 0.35rem; }
-@media (min-width: 768px) { .infographic-row.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+@media (min-width: 768px) { .infographic-row.cols-3 { grid-template-columns: 1fr 1fr 1fr; } .infographic-row.cols-2 { grid-template-columns: 1fr 1fr; } }
 
+/* Collapsible visual sections */
 /* ─── TOOLS GRID ─── */
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.85rem; }
 .tool-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 1.15rem 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s; }
@@ -463,6 +464,28 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   <div class="section-label l3">Level 3</div>
   <h2>Design Agents with Claude</h2>
   <p class="section-desc">Advanced resources for building agentic systems: the Agent SDK, Model Context Protocol, reusable skills, multi-agent orchestration, and cloud deployment.</p>
+
+  <div class="infographic-row cols-2">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/d3083d3f40bb2b6f477901cc9a240738d3dd1371-2401x1000.png" alt="The augmented LLM: retrieval, tools, memory" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">The augmented LLM: the basic building block with retrieval, tools, and memory</p>
+    </div>
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/7418719e3dab222dccb379b8879e1dc08ad34c78-2401x1000.png" alt="Prompt chaining workflow" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Prompt chaining: sequential steps with programmatic checks between LLM calls</p>
+    </div>
+  </div>
+  <div class="infographic-row cols-2">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/5c0c0e9fe4def0b584c04d37849941da55e5e71c-2401x1000.png" alt="Routing workflow" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Routing: classify inputs, direct to specialized handlers (Haiku vs. Opus)</p>
+    </div>
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/406bb032ca007fd1624f261af717d70e6ca86286-2401x1000.png" alt="Parallelization workflow" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Parallelization: run sub-tasks simultaneously and aggregate results</p>
+    </div>
+  </div>
+  <p style="font-size:0.7rem;color:var(--text-faint);font-family:var(--font-mono);margin-top:0.5rem;">Source: <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" style="color:var(--text-tertiary);">anthropic.com/engineering — Building Effective Agents</a></p>
   <div class="grid">
     <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">platform.claude.com</span></div><div class="card-title">Agent SDK: Official Documentation</div><div class="card-desc">Technical reference for production agents in Python and TypeScript. Agent lifecycle, tool registration, state persistence, workflow orchestration.</div><div class="card-bottom"><div class="tags"><span class="tag">SDK</span><span class="tag">Production</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">MCP: Build Rich-Context AI Apps</div><div class="card-desc">MCP client-server architecture, building custom MCP servers, connecting Claude to external data sources and tools.</div><div class="card-bottom"><div class="tags"><span class="tag">MCP</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
@@ -480,6 +503,18 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   <div class="section-label neutral">Foundations</div>
   <h2>Core Concepts</h2>
   <p class="section-desc">The principles that connect everything on this page. How Claude processes information, how you structure it, and how the discipline has evolved from writing prompts to designing complete AI environments.</p>
+
+  <div class="infographic-row cols-2">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/faa261102e46c7f090a2402a49000ffae18c5dd6-2292x1290.png" alt="Prompt engineering vs context engineering comparison" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">The evolution: prompt engineering focuses on writing one instruction. Context engineering manages the full state across turns, tools, memory, and retrieval.</p>
+    </div>
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/0442fe138158e84ffce92bed1624dd09f37ac46f-2292x1288.png" alt="System prompt calibration: too specific vs too vague" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Finding the right altitude: too specific creates brittleness, too vague lacks guidance. The sweet spot gives strong heuristics without hardcoding logic.</p>
+    </div>
+  </div>
+  <p style="font-size:0.7rem;color:var(--text-faint);font-family:var(--font-mono);margin-top:0.5rem;">Source: <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" style="color:var(--text-tertiary);">anthropic.com/engineering — Effective Context Engineering for AI Agents</a></p>
 
   <!-- Evolution visualization -->
   <div class="concept-evolution">
@@ -697,6 +732,34 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   <div class="section-label neutral">In detail</div>
   <h2>Claude Skills</h2>
   <p class="section-desc">Skills are folders with instructions, scripts, and resources that Claude loads dynamically when relevant. They turn Claude from a general assistant into a specialist for specific tasks. Available across Claude.ai, Claude Code, Cowork, and the API. Open standard since December 2025.</p>
+
+  <div class="infographic-row cols-2">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6f22d8913dbc6228e7f11a41e0b3c124d817b6d2-1650x929.jpg" alt="Anatomy of a SKILL.md file: name, description, and context" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Anatomy of a SKILL.md: metadata (name + description) is loaded at startup, body loaded on demand</p>
+    </div>
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/191bf5dd4b6f8cfe6f1ebafe6243dd1641ed231c-1650x1069.jpg" alt="Bundling additional files into a skill" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Skills bundle additional files: Claude reads them only when the task requires it</p>
+    </div>
+  </div>
+  <div class="infographic-row cols-2">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/a3bca2763d7892982a59c28aa4df7993aaae55ae-2292x673.jpg" alt="Progressive disclosure: 3 levels of context loading" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Progressive disclosure: metadata → core instructions → nested resources, loaded level by level</p>
+    </div>
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/441b9f6cc0d2337913c1f41b05357f16f51f702e-1650x929.jpg" alt="Skills triggered in context window via system prompt" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">How skills activate: system prompt → skill trigger → SKILL.md load → nested file load → task execution</p>
+    </div>
+  </div>
+  <div class="infographic-row" style="max-width:600px;margin-left:auto;margin-right:auto;">
+    <div>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/c24b4a2ff77277c430f2c9ef1541101766ae5714-1650x929.jpg" alt="Code execution via Skills" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Skills can include executable code: Claude runs scripts without loading them into context</p>
+    </div>
+  </div>
+  <p style="font-size:0.7rem;color:var(--text-faint);font-family:var(--font-mono);margin-top:0.5rem;">Source: <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" style="color:var(--text-tertiary);">anthropic.com/engineering — Equipping Agents with Agent Skills</a></p>
 
   <div class="concept-grid">
     <a href="https://www.anthropic.com/news/skills" target="_blank" class="concept-card orange">
