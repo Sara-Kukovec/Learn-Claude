@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Claude | Structured Resources for Every Skill Level</title>
+<meta name="description" content="One page to learn everything Claude can do. Courses, tools, tutorials, and people, structured by skill level and linked to primary sources.">
+<meta property="og:title" content="Learn Claude | The Complete Learning Guide">
+<meta property="og:description" content="Official courses, product guides, expert tutorials, and the people behind them. Structured in one place.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAF8;
+  --bg-white: #FFFFFF;
+  --bg-warm: #F5F3EF;
+  --bg-hover: #F0EDE7;
+  --bg-community: #F8F6F2;
+  --border: #E5E2DB;
+  --border-light: #EDEAE4;
+  --border-community: #E8E4DC;
+  --text: #1A1A1A;
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
+  --text-faint: #AAAAAA;
+  --clay: #D4714E;
+  --clay-light: rgba(212,113,78,0.08);
+  --clay-border: rgba(212,113,78,0.2);
+  --sand: #C49A6C;
+  --sand-light: rgba(196,154,108,0.08);
+  --sage: #5B8A72;
+  --sage-light: rgba(91,138,114,0.08);
+  --sage-border: rgba(91,138,114,0.2);
+  --stone: #6B7B8D;
+  --stone-light: rgba(107,123,141,0.08);
+  --ink: #3D3929;
+  --ink-light: rgba(61,57,41,0.06);
+  --l1: #5B8A72; --l1-bg: rgba(91,138,114,0.06); --l1-border: rgba(91,138,114,0.15);
+  --l2: #7B6BA5; --l2-bg: rgba(123,107,165,0.06); --l2-border: rgba(123,107,165,0.15);
+  --l3: #D4714E; --l3-bg: rgba(212,113,78,0.06); --l3-border: rgba(212,113,78,0.15);
+  --font: 'Inter', -apple-system, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; font-size: 15px; }
+::selection { background: rgba(212,113,78,0.15); }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 768px) { .container { padding: 0 1.25rem; } }
+
+/* ─── HEADER ─── */
+.header { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--border); }
+.header-inner { max-width: 700px; }
+.header-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 1.5rem; text-transform: uppercase; }
+.header-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); }
+.header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: 1rem; letter-spacing: -0.02em; }
+.header p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 640px; }
+.header .sub { font-size: 0.88rem; color: var(--text-tertiary); margin-top: 0.6rem; font-style: italic; }
+.header-meta { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.header-meta-item { display: flex; flex-direction: column; }
+.header-meta-item .val { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 600; color: var(--text); }
+.header-meta-item .lbl { font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+.cta-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1.5rem; padding: 0.65rem 1.25rem; border: 1px solid var(--sage); border-radius: var(--radius); font-size: 0.82rem; font-weight: 500; color: var(--sage); text-decoration: none; transition: background 0.2s, color 0.2s; }
+.cta-link:hover { background: var(--sage); color: white; }
+
+/* ─── NAV ─── */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-light); }
+.nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-link { padding: 0.85rem 1rem; font-size: 0.8rem; font-weight: 500; color: var(--text-tertiary); text-decoration: none; white-space: nowrap; transition: color 0.2s; border-bottom: 2px solid transparent; cursor: pointer; background: none; border-top: none; border-left: none; border-right: none; font-family: var(--font); }
+.nav-link:hover { color: var(--text); }
+.nav-link.active { color: var(--text); border-bottom-color: var(--clay); }
+
+/* ─── SECTIONS ─── */
+.section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
+.section:last-child { border-bottom: none; }
+.section-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem; font-weight: 500; }
+.section-label.l1 { color: var(--l1); } .section-label.l2 { color: var(--l2); } .section-label.l3 { color: var(--l3); } .section-label.neutral { color: var(--text-tertiary); }
+.section h2 { font-family: var(--font-serif); font-size: 1.65rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.section-desc { color: var(--text-secondary); font-size: 0.95rem; max-width: 620px; margin-bottom: 2.5rem; }
+
+/* ─── WARM SECTION ─── */
+.section-warm { background: var(--bg-warm); }
+
+/* ─── CALLOUT ─── */
+.callout { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+.callout h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+.callout p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* ─── CARDS ─── */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1rem; }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+.card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.4rem 1.5rem; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: border-color 0.2s, box-shadow 0.2s; }
+.card:hover { border-color: var(--border); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.card-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.9rem; }
+.badge { font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px; }
+.badge-course { background: rgba(123,107,165,0.1); color: #7B6BA5; }
+.badge-docs { background: rgba(91,138,114,0.1); color: #5B8A72; }
+.badge-tutorial { background: rgba(212,113,78,0.1); color: #D4714E; }
+.badge-video { background: rgba(180,80,80,0.1); color: #B45050; }
+.badge-guide { background: rgba(107,123,141,0.1); color: #6B7B8D; }
+.badge-tool { background: rgba(61,57,41,0.08); color: #6B6555; }
+.card-source { font-size: 0.68rem; color: var(--text-faint); font-family: var(--font-mono); }
+.card-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; line-height: 1.35; color: var(--text); }
+.card-desc { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6; flex-grow: 1; }
+.card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid var(--border-light); }
+.tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.tag { font-size: 0.6rem; font-family: var(--font-mono); padding: 0.15rem 0.45rem; border-radius: 3px; background: var(--ink-light); color: var(--text-tertiary); letter-spacing: 0.03em; }
+.card-arrow { font-size: 0.8rem; color: var(--text-faint); transition: color 0.2s, transform 0.2s; }
+.card:hover .card-arrow { color: var(--clay); transform: translateX(2px); }
+
+/* ─── TIER LABELS ─── */
+.tier-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.5rem; }
+.tier-dot { width: 5px; height: 5px; border-radius: 50%; }
+.tier-dot.official { background: var(--sage); }
+.tier-dot.community { background: var(--sand); }
+.tier-community { background: var(--bg-community); border-radius: var(--radius-lg); padding: 2rem; margin-top: 1.5rem; border: 1px solid var(--border-community); }
+.tier-community .card { background: #FFFFFF; border-color: var(--border-community); }
+
+/* ─── INFOGRAPHICS ─── */
+.infographic-row { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+.infographic-img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border-light); background: var(--bg-white); }
+.infographic-caption { font-size: 0.72rem; color: var(--text-faint); font-family: var(--font-mono); text-align: center; margin-top: 0.35rem; }
+@media (min-width: 768px) { .infographic-row.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* ─── TOOLS GRID ─── */
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.85rem; }
+.tool-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 1.15rem 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.tool-card:hover { border-color: var(--border); }
+.tool-name { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text); }
+.tool-desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.55; }
+.tool-url { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-faint); margin-top: 0.5rem; display: block; }
+
+/* ─── ECOSYSTEM SVG ─── */
+.eco-map { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 2rem; overflow-x: auto; }
+
+/* ─── CONCEPT CARDS (explanatory, visually distinct from resource cards) ─── */
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0 1.5rem; }
+.concept-card { display: block; text-decoration: none; color: inherit; border-radius: var(--radius); padding: 1rem 1.1rem; border-left: 3px solid var(--sage); background: linear-gradient(135deg, rgba(91,138,114,0.03) 0%, rgba(91,138,114,0.0) 100%); transition: border-color 0.2s, background 0.2s; }
+.concept-card:hover { border-left-color: var(--clay); background: rgba(212,113,78,0.03); }
+.concept-card .cc-title { font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--text); }
+.concept-card .cc-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; }
+.concept-card .cc-link { font-family: var(--font-mono); font-size: 0.62rem; color: var(--sage); margin-top: 0.5rem; display: block; letter-spacing: 0.02em; }
+.concept-card:hover .cc-link { color: var(--clay); }
+.concept-card.purple { border-left-color: var(--l2); background: linear-gradient(135deg, rgba(123,107,165,0.03) 0%, rgba(123,107,165,0.0) 100%); }
+.concept-card.purple:hover { border-left-color: var(--clay); }
+.concept-card.orange { border-left-color: var(--clay); background: linear-gradient(135deg, rgba(212,113,78,0.03) 0%, rgba(212,113,78,0.0) 100%); }
+.concept-card.orange:hover { border-left-color: var(--text); }
+
+/* ─── CONCEPTS SECTION (distinct pillar-based layout) ─── */
+.concepts-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
+.concept-pillar { border-radius: var(--radius-lg); padding: 1.5rem; position: relative; overflow: hidden; }
+.concept-pillar::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.concept-pillar.p1 { background: rgba(91,138,114,0.04); border: 1px solid rgba(91,138,114,0.12); }
+.concept-pillar.p1::before { background: var(--sage); }
+.concept-pillar.p2 { background: rgba(123,107,165,0.04); border: 1px solid rgba(123,107,165,0.12); }
+.concept-pillar.p2::before { background: var(--l2); }
+.concept-pillar.p3 { background: rgba(212,113,78,0.04); border: 1px solid rgba(212,113,78,0.12); }
+.concept-pillar.p3::before { background: var(--clay); }
+.concept-pillar .cp-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.concept-pillar.p1 .cp-label { color: var(--sage); }
+.concept-pillar.p2 .cp-label { color: var(--l2); }
+.concept-pillar.p3 .cp-label { color: var(--clay); }
+.concept-pillar .cp-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; }
+.concept-pillar .cp-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.75rem; }
+.concept-pillar .cp-links { display: flex; flex-direction: column; gap: 0.35rem; }
+.concept-pillar .cp-link { font-size: 0.78rem; color: var(--sage); text-decoration: none; display: flex; align-items: baseline; gap: 0.35rem; transition: color 0.2s; }
+.concept-pillar .cp-link:hover { color: var(--clay); }
+.concept-pillar .cp-link::before { content: '→'; font-size: 0.7rem; flex-shrink: 0; }
+.concept-evolution { display: flex; align-items: center; gap: 0; margin: 1.5rem 0 2rem; flex-wrap: wrap; justify-content: center; }
+.evo-step { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 500; }
+.evo-step.e1 { background: var(--sage-light); color: var(--sage); }
+.evo-step.e2 { background: var(--l2-bg); color: var(--l2); }
+.evo-step.e3 { background: var(--clay-light); color: var(--clay); }
+.evo-arrow { color: var(--text-faint); font-size: 0.9rem; padding: 0 0.25rem; }
+@media (max-width: 600px) { .concept-evolution { gap: 0.25rem; } .evo-step { padding: 0.4rem 0.6rem; font-size: 0.75rem; } }
+
+/* ─── LEARNING PATH (interactive) ─── */
+.journey-steps { display: flex; flex-direction: column; gap: 0; }
+.j-step { border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s; margin-bottom: 0.5rem; }
+.j-step:hover { border-color: var(--border); }
+.j-step.active { border-color: var(--clay-border); box-shadow: 0 2px 16px rgba(212,113,78,0.08); }
+.j-header { display: flex; align-items: center; gap: 1rem; padding: 1.15rem 1.5rem; cursor: pointer; background: var(--bg-white); transition: background 0.2s; user-select: none; }
+.j-header:hover { background: #FDFCFA; }
+.j-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; flex-shrink: 0; transition: background 0.3s, color 0.3s; }
+.j-step.s1 .j-num { background: var(--l1-bg); color: var(--l1); border: 1.5px solid var(--l1-border); }
+.j-step.s2 .j-num { background: var(--l2-bg); color: var(--l2); border: 1.5px solid var(--l2-border); }
+.j-step.s3 .j-num { background: var(--l3-bg); color: var(--l3); border: 1.5px solid var(--l3-border); }
+.j-step.active.s1 .j-num { background: var(--l1); color: #fff; }
+.j-step.active.s2 .j-num { background: var(--l2); color: #fff; }
+.j-step.active.s3 .j-num { background: var(--l3); color: #fff; }
+.j-title { font-size: 0.95rem; font-weight: 600; color: var(--text); flex-grow: 1; }
+.j-level { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); flex-shrink: 0; }
+.j-toggle { font-size: 1rem; color: var(--text-faint); transition: transform 0.3s; flex-shrink: 0; }
+.j-step.active .j-toggle { transform: rotate(180deg); }
+.j-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.j-step.active .j-body { max-height: 600px; }
+.j-inner { padding: 0 1.5rem 1.5rem 4rem; }
+.j-outcome { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem; padding: 0.75rem 1rem; border-radius: var(--radius); }
+.j-step.s1 .j-outcome { background: var(--l1-bg); }
+.j-step.s2 .j-outcome { background: var(--l2-bg); }
+.j-step.s3 .j-outcome { background: var(--l3-bg); }
+.j-links { display: flex; flex-direction: column; gap: 0.4rem; }
+.j-link { display: inline-flex; align-items: baseline; gap: 0.5rem; font-size: 0.82rem; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; line-height: 1.5; }
+.j-link:hover { color: var(--text); }
+.j-link::before { content: '→'; color: var(--text-faint); font-size: 0.75rem; flex-shrink: 0; }
+/* Progress bar */
+.j-progress { display: flex; gap: 3px; margin-bottom: 2rem; }
+.j-pip { flex: 1; height: 4px; border-radius: 2px; background: var(--border-light); transition: background 0.3s; }
+.j-pip.l1 { background: var(--l1-border); } .j-pip.l2 { background: var(--l2-border); } .j-pip.l3 { background: var(--l3-border); }
+@media (max-width: 640px) { .j-inner { padding: 0 1rem 1.25rem 1rem; } .j-header { padding: 1rem; gap: 0.75rem; } }
+
+/* ─── NETWORK ─── */
+.network-category { margin-bottom: 2.5rem; }
+.network-category:last-child { margin-bottom: 0; }
+.network-cat-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text); }
+.network-cat-desc { font-size: 0.82rem; color: var(--text-tertiary); margin-bottom: 1.25rem; max-width: 600px; }
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.7rem; }
+.person-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 1rem 1.15rem; text-decoration: none; color: inherit; transition: border-color 0.2s; display: block; }
+.person-card:hover { border-color: var(--border); }
+.person-name { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+.person-role { font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.15rem; line-height: 1.4; }
+.person-focus { font-size: 0.72rem; color: var(--text-faint); margin-top: 0.35rem; font-family: var(--font-mono); line-height: 1.4; }
+
+/* ─── FOOTER ─── */
+.footer { padding: 2.5rem 0; border-top: 1px solid var(--border); text-align: center; }
+.footer p { font-size: 0.75rem; color: var(--text-faint); line-height: 1.7; }
+.footer a { color: var(--text-tertiary); text-decoration: none; }
+.footer a:hover { color: var(--text); }
+
+/* ─── PHILOSOPHY BLOCK ─── */
+.philosophy { background: var(--bg-warm); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 3rem 0; }
+.philosophy-inner { max-width: 640px; }
+.philosophy-inner h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.75rem; }
+.philosophy-inner p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.75rem; }
+.philosophy-inner p:last-child { margin-bottom: 0; }
+
+/* ─── SUB-HEADER for sections ─── */
+.sh3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text); }
+.sh3.mt { margin-top: 2rem; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+  .header { padding: 3rem 0 2.5rem; }
+  .section { padding: 3rem 0; }
+  .tools-grid { grid-template-columns: 1fr 1fr; }
+  .header-meta { gap: 1.25rem; }
+  .people-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  .people-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-badge"><span class="dot"></span> Curated · February 2026</div>
+      <h1>Learn Claude</h1>
+      <p>One page to learn everything Claude can do. Courses, tools, tutorials, and people, structured by skill level and linked to primary sources.</p>
+      <p class="sub">Built because the best resources exist. They're just spread across too many platforms.</p>
+      <div class="header-meta">
+        <div class="header-meta-item"><span class="val">130+</span><span class="lbl">Curated resources</span></div>
+        <div class="header-meta-item"><span class="val">50</span><span class="lbl">Experts & voices</span></div>
+        <div class="header-meta-item"><span class="val">7</span><span class="lbl">Steps to Claude fluency</span></div>
+        <div class="header-meta-item"><span class="val">3</span><span class="lbl">Skill levels</span></div>
+        <div class="header-meta-item"><span class="val">Free</span><span class="lbl">Every resource</span></div>
+      </div>
+      <a href="https://www.anthropic.com/learn" target="_blank" class="cta-link">Start at Anthropic Academy →</a>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <button class="nav-link active" onclick="go('start')">Start</button>
+      <button class="nav-link" onclick="go('level1')">Use</button>
+      <button class="nav-link" onclick="go('level2')">Build</button>
+      <button class="nav-link" onclick="go('level3')">Agents</button>
+      <button class="nav-link" onclick="go('concepts')">Concepts</button>
+      <button class="nav-link" onclick="go('ecosystem')">Tools</button>
+      <button class="nav-link" onclick="go('code')">Code</button>
+      <button class="nav-link" onclick="go('cowork')">Cowork</button>
+      <button class="nav-link" onclick="go('skills')">Skills</button>
+      <button class="nav-link" onclick="go('path')">Path</button>
+      <button class="nav-link" onclick="go('network')">Network</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+<!-- ════════════════════ PAGE OVERVIEW ════════════════════ -->
+<section class="section" id="overview" style="padding-bottom:2.5rem;">
+  <div class="section-label neutral">How this page works</div>
+  <h2>What you will find here</h2>
+  <p class="section-desc">Eleven sections, one reading order. Start at any level that fits your experience. Every entry links to its original source.</p>
+
+  <div class="eco-map" style="background:var(--bg);border-color:var(--border-light);">
+    <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:880px;font-family:'Inter',sans-serif;">
+
+      <!-- Row 1: Learning Levels -->
+      <text x="22" y="20" fill="#888" font-size="9" letter-spacing="0.08em" font-weight="500">LEARN</text>
+
+      <rect x="22" y="32" width="195" height="50" rx="7" fill="#FFF" stroke="#5B8A72" stroke-width="1.2"/>
+      <text x="119" y="52" text-anchor="middle" fill="#5B8A72" font-size="8.5" font-weight="600" letter-spacing="0.04em">LEVEL 1</text>
+      <text x="119" y="68" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Use Claude</text>
+
+      <line x1="217" y1="57" x2="237" y2="57" stroke="#E5E2DB" stroke-width="1"/>
+
+      <rect x="237" y="32" width="195" height="50" rx="7" fill="#FFF" stroke="#7B6BA5" stroke-width="1.2"/>
+      <text x="334" y="52" text-anchor="middle" fill="#7B6BA5" font-size="8.5" font-weight="600" letter-spacing="0.04em">LEVEL 2</text>
+      <text x="334" y="68" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Build with Claude</text>
+
+      <line x1="432" y1="57" x2="452" y2="57" stroke="#E5E2DB" stroke-width="1"/>
+
+      <rect x="452" y="32" width="195" height="50" rx="7" fill="#FFF" stroke="#D4714E" stroke-width="1.2"/>
+      <text x="549" y="52" text-anchor="middle" fill="#D4714E" font-size="8.5" font-weight="600" letter-spacing="0.04em">LEVEL 3</text>
+      <text x="549" y="68" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Design Agents</text>
+
+      <rect x="670" y="32" width="190" height="50" rx="7" fill="rgba(91,138,114,0.04)" stroke="rgba(91,138,114,0.12)" stroke-width="1"/>
+      <text x="765" y="52" text-anchor="middle" fill="#888" font-size="9">Courses, docs, guides</text>
+      <text x="765" y="67" text-anchor="middle" fill="#888" font-size="9">from official sources</text>
+
+      <!-- Row 2: Concepts (spans full width, distinct) -->
+      <text x="22" y="112" fill="#888" font-size="9" letter-spacing="0.08em" font-weight="500">UNDERSTAND</text>
+
+      <rect x="22" y="124" width="270" height="42" rx="7" fill="rgba(91,138,114,0.04)" stroke="rgba(91,138,114,0.12)" stroke-width="1"/>
+      <text x="157" y="149" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="500">Prompt Engineering</text>
+
+      <rect x="305" y="124" width="270" height="42" rx="7" fill="rgba(123,107,165,0.04)" stroke="rgba(123,107,165,0.12)" stroke-width="1"/>
+      <text x="440" y="149" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="500">Context Engineering</text>
+
+      <rect x="588" y="124" width="272" height="42" rx="7" fill="rgba(212,113,78,0.04)" stroke="rgba(212,113,78,0.12)" stroke-width="1"/>
+      <text x="724" y="149" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="500">Agent Environments</text>
+
+      <!-- Row 3: Explore -->
+      <text x="22" y="196" fill="#888" font-size="9" letter-spacing="0.08em" font-weight="500">EXPLORE</text>
+
+      <rect x="22" y="208" width="838" height="42" rx="7" fill="#F5F3EF" stroke="#E5E2DB" stroke-width="1"/>
+      <text x="441" y="234" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Tools &amp; Platforms</text>
+
+      <!-- Row 4: Practice -->
+      <text x="22" y="280" fill="#888" font-size="9" letter-spacing="0.08em" font-weight="500">PRACTICE</text>
+
+      <rect x="22" y="292" width="270" height="42" rx="7" fill="#FFF" stroke="#E5E2DB" stroke-width="1.2"/>
+      <text x="157" y="318" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Claude Code</text>
+
+      <rect x="305" y="292" width="270" height="42" rx="7" fill="#FFF" stroke="#E5E2DB" stroke-width="1.2"/>
+      <text x="440" y="318" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Cowork</text>
+
+      <rect x="588" y="292" width="272" height="42" rx="7" fill="#FFF" stroke="#C49A6C" stroke-width="1.2"/>
+      <text x="724" y="318" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Skills</text>
+
+      <!-- Row 5: Path + Network -->
+      <rect x="22" y="348" width="410" height="36" rx="7" fill="rgba(212,113,78,0.04)" stroke="rgba(212,113,78,0.12)" stroke-width="1"/>
+      <text x="227" y="370" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="500">7 Steps to Fluency</text>
+
+      <rect x="450" y="348" width="410" height="36" rx="7" fill="rgba(196,154,108,0.04)" stroke="rgba(196,154,108,0.12)" stroke-width="1"/>
+      <text x="655" y="370" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="500">People &amp; Platforms</text>
+
+    </svg>
+  </div>
+</section>
+
+<!-- ════════════════════ START HERE ════════════════════ -->
+<section class="section" id="start">
+  <div class="section-label neutral">Start here</div>
+  <h2>About Claude</h2>
+  <p class="section-desc">Claude is an AI system built by Anthropic, designed around principles of helpfulness, safety, and honesty. It operates as a conversational interface at claude.ai, as an agentic coding tool via Claude Code, and as an API for integration into custom applications.</p>
+
+  <div class="grid">
+    <a href="https://www.anthropic.com/transparency" target="_blank" class="card">
+      <div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">anthropic.com</span></div>
+      <div class="card-title">Anthropic's Approach to AI Safety</div>
+      <div class="card-desc">How Anthropic develops Claude: Constitutional AI, responsible scaling commitments, and the design principles that shape model behavior.</div>
+      <div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Philosophy</span></div><span class="card-arrow">→</span></div>
+    </a>
+    <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" class="card">
+      <div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">platform.claude.com</span></div>
+      <div class="card-title">Models Overview: Opus, Sonnet, Haiku</div>
+      <div class="card-desc">Capabilities, context windows, and intended use for each model. Opus 4.6 handles complex reasoning. Sonnet 4.5 is optimized for coding. Haiku 4.5 prioritizes speed.</div>
+      <div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Models</span></div><span class="card-arrow">→</span></div>
+    </a>
+    <a href="https://support.claude.com/en/collections/10548294-video-tutorials" target="_blank" class="card">
+      <div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">support.claude.com</span></div>
+      <div class="card-title">Official Video Tutorials</div>
+      <div class="card-desc">Short official walkthroughs covering Projects, Artifacts, and role-specific use cases for marketing, engineering, HR, and product teams.</div>
+      <div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Visual</span></div><span class="card-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════ LEVEL 1: USE ════════════════════ -->
+<section class="section" id="level1">
+  <div class="section-label l1">Level 1</div>
+  <h2>Use Claude</h2>
+  <p class="section-desc">Foundational resources for working with Claude in daily tasks: writing, research, structured thinking, and iterative problem-solving. Suitable for all skill levels.</p>
+  <div class="grid">
+    <a href="https://anthropic.skilljar.com/claude-101" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude 101</div><div class="card-desc">Official foundations course covering conversation structure, Projects, file handling, and techniques for consistent outputs. Includes certificate.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/learn/claude-for-you" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">AI Fluency: Framework & Foundations</div><div class="card-desc">A structured framework for reasoning about AI capabilities and limitations. Covers effective, efficient, ethical, and safe use of Claude.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Mindset</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://support.claude.com/en/articles/10977024-how-to-use-projects" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">support.claude.com</span></div><div class="card-title">How to Use Projects</div><div class="card-desc">Official guide to Claude Projects: creating workspaces, uploading files, writing custom instructions, and organizing conversations by topic.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Beginner</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Prompt Engineering Interactive Tutorial</div><div class="card-desc">Nine-chapter hands-on course with exercises and playground. Available as Jupyter Notebooks and Google Sheets.</div><div class="card-bottom"><div class="tags"><span class="tag">Interactive</span><span class="tag">Hands-on</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.coursera.org/partners/anthropic" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Coursera</span></div><div class="card-title">Real-World AI for Everyone (3-Course Series)</div><div class="card-desc">Three-course specialization developed with Anthropic and AWIT. AI fundamentals, collaboration techniques, and workflow automation.</div><div class="card-bottom"><div class="tags"><span class="tag">Coursera</span><span class="tag">Series</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://platform.claude.com/docs/en/about-claude/use-case-guides/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">platform.claude.com</span></div><div class="card-title">Use Case Guides</div><div class="card-desc">Step-by-step implementation for common patterns: support ticket classification, conversational assistants, content moderation, summarization.</div><div class="card-bottom"><div class="tags"><span class="tag">Practical</span><span class="tag">Business</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+
+  <h3 class="sh3 mt">Core Features You Should Know</h3>
+  <p class="section-desc" style="margin-top:0.5rem;">These features turn Claude from a chatbot into a persistent workspace. Understanding them is the difference between casual use and real productivity.</p>
+  <div class="concept-grid">
+    <a href="https://support.claude.com/en/articles/10977024-how-to-use-projects" target="_blank" class="concept-card">
+      <div class="cc-title">Projects</div>
+      <div class="cc-desc">Persistent workspaces with custom instructions and uploaded files. Claude reads everything before your first message. Create separate Projects for different contexts.</div>
+      <span class="cc-link">support.claude.com → How to Use Projects</span>
+    </a>
+    <a href="https://support.claude.com/en/articles/11182383-memory-faq" target="_blank" class="concept-card">
+      <div class="cc-title">Memory</div>
+      <div class="cc-desc">Claude remembers preferences across conversations: your name, role, writing style, technical level. Builds automatically. View, edit, and delete in Settings.</div>
+      <span class="cc-link">support.claude.com → Memory FAQ</span>
+    </a>
+    <a href="https://support.claude.com/en/articles/9949437-what-are-artifacts-and-how-do-i-use-them" target="_blank" class="concept-card">
+      <div class="cc-title">Artifacts</div>
+      <div class="cc-desc">Live, interactive outputs: React apps, HTML pages, charts, documents, SVGs. Can call Claude's API, use persistent storage (20MB), and be shared via public links.</div>
+      <span class="cc-link">support.claude.com → What Are Artifacts</span>
+    </a>
+    <a href="https://support.claude.com/en/articles/14218498-using-web-search" target="_blank" class="concept-card">
+      <div class="cc-title">Web Search & Files</div>
+      <div class="cc-desc">Claude searches the web for current information and creates files: Word docs, spreadsheets, PDFs, presentations. Upload documents for analysis or transformation.</div>
+      <span class="cc-link">support.claude.com → Web Search</span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════ LEVEL 2: BUILD ════════════════════ -->
+<section class="section" id="level2">
+  <div class="section-label l2">Level 2</div>
+  <h2>Build with Claude</h2>
+  <p class="section-desc">Resources for integrating Claude into applications and development workflows. Covers the API, Claude Code, tool use, and building structured AI systems.</p>
+  <div class="grid">
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Anthropic API Fundamentals</div><div class="card-desc">Structured introduction to the Claude API: endpoint architecture, request formatting, authentication, response handling, and operational best practices.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span><span class="tag">API</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude Code in Action</div><div class="card-desc">Pair-programming patterns, automated refactoring, test generation, and Git workflow management. Official certificate.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span><span class="tag">Code</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Claude Code: Official Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md configuration, MCP server integration, Git workflows, IDE setup, and session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Terminal</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://platform.claude.com/docs/en/build-with-claude/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">platform.claude.com</span></div><div class="card-title">Features Overview: Build with Claude</div><div class="card-desc">Technical overview: tool use, file handling, citations, batch processing, structured outputs, streaming, vision, and PDF support.</div><div class="card-bottom"><div class="tags"><span class="tag">Complete</span><span class="tag">API</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://github.com/anthropics/courses" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Anthropic Courses (GitHub Repo)</div><div class="card-desc">5 official Jupyter Notebook courses: API Fundamentals, Prompt Engineering, Real World Prompting, Evaluations, Tool Use.</div><div class="card-bottom"><div class="tags"><span class="tag">Jupyter</span><span class="tag">Hands-on</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://github.com/anthropics/anthropic-cookbook" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Anthropic Cookbook</div><div class="card-desc">Code recipes for common workflows: tool use patterns, multi-turn conversations, structured outputs, citations, embeddings, RAG, and more.</div><div class="card-bottom"><div class="tags"><span class="tag">Hands-on</span><span class="tag">Cookbook</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Context Engineering for AI Agents</div><div class="card-desc">The definitive Anthropic article: compaction, just-in-time retrieval, tool search, sub-agent isolation, CLAUDE.md best practices.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Claude 4.x Prompting Best Practices</div><div class="card-desc">Adaptive thinking, extended thinking, vision optimization, context-aware output control, multi-window workflows.</div><div class="card-bottom"><div class="tags"><span class="tag">Current</span><span class="tag">Claude 4.x</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+</section>
+
+<!-- ════════════════════ LEVEL 3: AGENTS ════════════════════ -->
+<section class="section" id="level3">
+  <div class="section-label l3">Level 3</div>
+  <h2>Design Agents with Claude</h2>
+  <p class="section-desc">Advanced resources for building agentic systems: the Agent SDK, Model Context Protocol, reusable skills, multi-agent orchestration, and cloud deployment.</p>
+  <div class="grid">
+    <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">platform.claude.com</span></div><div class="card-title">Agent SDK: Official Documentation</div><div class="card-desc">Technical reference for production agents in Python and TypeScript. Agent lifecycle, tool registration, state persistence, workflow orchestration.</div><div class="card-bottom"><div class="tags"><span class="tag">SDK</span><span class="tag">Production</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">MCP: Build Rich-Context AI Apps</div><div class="card-desc">MCP client-server architecture, building custom MCP servers, connecting Claude to external data sources and tools.</div><div class="card-bottom"><div class="tags"><span class="tag">MCP</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Tool Use: Connect Claude to External Tools</div><div class="card-desc">Function calling: tool schemas, connecting external systems, handling responses, and building multi-step tool chains.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">MCP: Getting Started & Advanced Concepts</div><div class="card-desc">Two sequential courses: build MCP servers from scratch. Advanced course covers sampling, notifications, file system access, transport.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">2 Courses</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude on Amazon Bedrock & Google Vertex</div><div class="card-desc">Enterprise deployment through AWS Bedrock and Google Cloud Vertex AI. Scaling, compliance, and production patterns.</div><div class="card-bottom"><div class="tags"><span class="tag">Enterprise</span><span class="tag">Cloud</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+</section>
+
+</div><!-- end container for level sections -->
+
+<!-- ════════════════════ CONCEPTS ════════════════════ -->
+<section class="section" id="concepts">
+  <div class="container">
+  <div class="section-label neutral">Foundations</div>
+  <h2>Core Concepts</h2>
+  <p class="section-desc">The principles that connect everything on this page. How Claude processes information, how you structure it, and how the discipline has evolved from writing prompts to designing complete AI environments.</p>
+
+  <!-- Evolution visualization -->
+  <div class="concept-evolution">
+    <div class="evo-step e1">Prompts</div>
+    <span class="evo-arrow">→</span>
+    <div class="evo-step e1">Context Windows</div>
+    <span class="evo-arrow">→</span>
+    <div class="evo-step e2">CLAUDE.md & Memory</div>
+    <span class="evo-arrow">→</span>
+    <div class="evo-step e2">Skills & MCP</div>
+    <span class="evo-arrow">→</span>
+    <div class="evo-step e3">Agent Environments</div>
+  </div>
+
+  <!-- Three pillars with unique UX -->
+  <div class="concepts-pillars">
+    <div class="concept-pillar p1">
+      <div class="cp-label">Foundation</div>
+      <div class="cp-title">Prompt Engineering</div>
+      <div class="cp-desc">Where it starts: writing clear, structured instructions. XML tags for organization, chain-of-thought for reasoning, role-based system prompts for consistent behavior, few-shot examples for calibration.</div>
+      <div class="cp-links">
+        <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="cp-link">Prompt Engineering Guide (Anthropic)</a>
+        <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="cp-link">Interactive Tutorial (9 chapters)</a>
+        <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" class="cp-link">Claude 4.x Prompting Best Practices</a>
+      </div>
+    </div>
+
+    <div class="concept-pillar p2">
+      <div class="cp-label">The Paradigm Shift</div>
+      <div class="cp-title">Context Engineering</div>
+      <div class="cp-desc">The critical evolution: managing the full context window, not just one prompt. CLAUDE.md for persistent project knowledge. Compaction to summarize and re-start cleanly. Just-in-time retrieval over upfront loading. As context fills past 50%, accuracy degrades.</div>
+      <div class="cp-links">
+        <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="cp-link">Context Engineering for Agents (Anthropic)</a>
+        <a href="https://code.claude.com/docs/en/memory" target="_blank" class="cp-link">CLAUDE.md & Memory hierarchy</a>
+        <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="cp-link">Claude Code Best Practices</a>
+        <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" class="cp-link">Harnesses for Long-Running Agents</a>
+      </div>
+    </div>
+
+    <div class="concept-pillar p3">
+      <div class="cp-label">The Frontier</div>
+      <div class="cp-title">Agent Environments</div>
+      <div class="cp-desc">The full picture: packaging workflows as reusable Skills. Connecting tools via MCP. Coordinating sub-agents with isolated context windows. Multi-session state with progress files. Designing complete environments where Claude operates autonomously.</div>
+      <div class="cp-links">
+        <a href="https://www.anthropic.com/news/skills" target="_blank" class="cp-link">Agent Skills Open Standard</a>
+        <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" class="cp-link">Engineering: Building Agent Skills</a>
+        <a href="https://modelcontextprotocol.io" target="_blank" class="cp-link">MCP Protocol specification</a>
+        <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank" class="cp-link">Agent SDK Documentation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Anthropic calls these: official reference grid -->
+  <div class="tier-label"><span class="tier-dot official"></span> Deep-dive resources</div>
+  <div class="grid">
+    <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Context Engineering for AI Agents</div><div class="card-desc">The definitive article: compaction strategies, just-in-time retrieval, tool search patterns, sub-agent isolation, and context budget management.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Prompt Engineering Guide</div><div class="card-desc">The foundation: clear instructions, XML structuring, chain-of-thought reasoning, few-shot examples, role-based system prompts, output formatting.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Effective Harnesses for Long-Running Agents</div><div class="card-desc">Multi-context-window workflows: initializer agents, progress files, incremental development, and bridging sessions across compactions.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://code.claude.com/docs/en/memory" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Manage Claude's Memory</div><div class="card-desc">CLAUDE.md hierarchy, auto memory, rules directories, CLAUDE.local.md, project memory structure, imports, and the 200-line entrypoint.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Memory</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Claude 4.x Prompting Best Practices</div><div class="card-desc">Model-specific techniques: adaptive thinking, extended thinking guidance, vision optimization, context-aware output control.</div><div class="card-bottom"><div class="tags"><span class="tag">Current</span><span class="tag">Claude 4.x</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Claude Code Best Practices</div><div class="card-desc">CLAUDE.md configuration, slash commands, hooks, MCP integration, sub-agents, and practical context management patterns.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Practical</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+  </div>
+</section>
+
+<!-- ════════════════════ TOOLS & PLATFORMS (warm bg) ════════════════════ -->
+<section class="section section-warm" id="ecosystem">
+  <div class="container">
+  <div class="section-label neutral">Ecosystem</div>
+  <h2>Tools & Platforms</h2>
+  <p class="section-desc">Official entry points to the Claude ecosystem. Each serves a distinct function in learning, building, or deploying.</p>
+
+  <!-- ECOSYSTEM MAP SVG -->
+  <div class="eco-map">
+    <svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:920px;font-family:'Inter',sans-serif;">
+      <text x="460" y="22" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600" letter-spacing="0.08em">THE CLAUDE ECOSYSTEM</text>
+      <!-- Center -->
+      <rect x="370" y="45" width="180" height="48" rx="8" fill="#FAFAF8" stroke="#D4714E" stroke-width="1.5"/>
+      <text x="460" y="66" text-anchor="middle" fill="#1A1A1A" font-size="14" font-weight="700">Claude</text>
+      <text x="460" y="82" text-anchor="middle" fill="#888" font-size="9">claude.ai · Chat · Projects · Memory</text>
+      <!-- Lines -->
+      <line x1="370" y1="69" x2="180" y2="130" stroke="#E5E2DB" stroke-width="1"/>
+      <line x1="460" y1="93" x2="460" y2="130" stroke="#E5E2DB" stroke-width="1"/>
+      <line x1="550" y1="69" x2="740" y2="130" stroke="#E5E2DB" stroke-width="1"/>
+      <!-- Code -->
+      <rect x="70" y="130" width="220" height="44" rx="6" fill="#FFF" stroke="#5B8A72" stroke-width="1.2"/>
+      <text x="180" y="149" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Claude Code</text>
+      <text x="180" y="165" text-anchor="middle" fill="#888" font-size="8.5">Terminal · IDE · Agentic coding</text>
+      <!-- Cowork -->
+      <rect x="340" y="130" width="240" height="44" rx="6" fill="#FFF" stroke="#7B6BA5" stroke-width="1.2"/>
+      <text x="460" y="149" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Cowork</text>
+      <text x="460" y="165" text-anchor="middle" fill="#888" font-size="8.5">Desktop agent · Files · Skills · Sub-agents</text>
+      <!-- Integrations -->
+      <rect x="630" y="130" width="220" height="44" rx="6" fill="#FFF" stroke="#C49A6C" stroke-width="1.2"/>
+      <text x="740" y="149" text-anchor="middle" fill="#1A1A1A" font-size="12" font-weight="600">Integrations</text>
+      <text x="740" y="165" text-anchor="middle" fill="#888" font-size="8.5">Chrome · Excel · PowerPoint · Slack</text>
+      <!-- Foundation -->
+      <line x1="70" y1="210" x2="850" y2="210" stroke="#E5E2DB" stroke-width="1"/>
+      <text x="460" y="233" text-anchor="middle" fill="#AAA" font-size="9" letter-spacing="0.08em">FOUNDATION</text>
+      <rect x="50" y="250" width="120" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="110" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">API & SDK</text>
+      <rect x="185" y="250" width="120" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="245" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">MCP Protocol</text>
+      <rect x="320" y="250" width="120" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="380" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">Skills</text>
+      <rect x="455" y="250" width="120" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="515" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">Connectors</text>
+      <rect x="590" y="250" width="120" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="650" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">Agent SDK</text>
+      <rect x="725" y="250" width="130" height="32" rx="5" fill="rgba(61,57,41,0.03)" stroke="rgba(61,57,41,0.1)" stroke-width="1"/><text x="790" y="271" text-anchor="middle" fill="#6B6555" font-size="9.5">Bedrock · Vertex</text>
+    </svg>
+  </div>
+
+  <div class="tools-grid">
+    <a href="https://claude.ai" target="_blank" class="tool-card"><div class="tool-name">Claude.ai</div><div class="tool-desc">Chat interface. Projects, Artifacts, Memory, Web Search, file creation.</div><span class="tool-url">claude.ai</span></a>
+    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="tool-card"><div class="tool-name">Claude Code</div><div class="tool-desc">Agentic coding in terminal, IDE, desktop, and browser. Reads codebases, writes code, runs tests.</div><span class="tool-url">code.claude.com</span></a>
+    <a href="https://claude.com/product/cowork" target="_blank" class="tool-card"><div class="tool-name">Cowork</div><div class="tool-desc">Desktop agent for non-coding tasks. File access, multi-step execution, plugins, MCP connectors.</div><span class="tool-url">claude.com/product/cowork</span></a>
+    <a href="https://www.anthropic.com/news/claude-for-chrome" target="_blank" class="tool-card"><div class="tool-name">Claude in Chrome</div><div class="tool-desc">Browser agent. Reads pages, navigates sites, fills forms, automates multi-tab workflows.</div><span class="tool-url">anthropic.com</span></a>
+    <a href="https://claude.com/claude-in-excel" target="_blank" class="tool-card"><div class="tool-name">Claude in Excel</div><div class="tool-desc">Spreadsheet agent. Multi-tab workbooks, formula debugging, pivot tables, conditional formatting.</div><span class="tool-url">claude.com/claude-in-excel</span></a>
+    <a href="https://claude.com/claude-in-powerpoint" target="_blank" class="tool-card"><div class="tool-name">Claude in PowerPoint</div><div class="tool-desc">Presentation agent. Template-aware slides, brand compliance, bullets to diagrams.</div><span class="tool-url">claude.com/claude-in-powerpoint</span></a>
+    <a href="https://www.anthropic.com/integrations/slack" target="_blank" class="tool-card"><div class="tool-name">Claude in Slack</div><div class="tool-desc">Team assistant. Summarizes threads, answers from channels, runs Claude Code from chat.</div><span class="tool-url">anthropic.com</span></a>
+    <a href="https://platform.claude.com" target="_blank" class="tool-card"><div class="tool-name">Developer Platform</div><div class="tool-desc">API console, Workbench, release notes, billing. The control center for developers.</div><span class="tool-url">platform.claude.com</span></a>
+    <a href="https://modelcontextprotocol.io" target="_blank" class="tool-card"><div class="tool-name">MCP Protocol</div><div class="tool-desc">Open standard for tool connectivity. Connect Claude to Drive, Slack, databases, GitHub.</div><span class="tool-url">modelcontextprotocol.io</span></a>
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="tool-card"><div class="tool-name">Anthropic Academy</div><div class="tool-desc">Official learning platform. 11+ courses, certificates, progress tracking.</div><span class="tool-url">anthropic.skilljar.com</span></a>
+    <a href="https://www.anthropic.com/learn" target="_blank" class="tool-card"><div class="tool-name">Learn Hub</div><div class="tool-desc">Anthropic's landing page for all learning resources. Courses, docs, guides.</div><span class="tool-url">anthropic.com/learn</span></a>
+    <a href="https://docs.anthropic.com" target="_blank" class="tool-card"><div class="tool-name">Claude Docs</div><div class="tool-desc">Complete API documentation. Models, prompt engineering, tools, SDKs, release notes.</div><span class="tool-url">docs.anthropic.com</span></a>
+    <a href="https://www.anthropic.com/research" target="_blank" class="tool-card"><div class="tool-name">Research</div><div class="tool-desc">Papers on Constitutional AI, alignment, interpretability. The science behind Claude.</div><span class="tool-url">anthropic.com/research</span></a>
+    <a href="https://www.deeplearning.ai/courses/?courses_date_desc%5BrefinementList%5D%5Bpartnership%5D%5B0%5D=Anthropic" target="_blank" class="tool-card"><div class="tool-name">DeepLearning.AI × Anthropic</div><div class="tool-desc">All Anthropic courses on DeepLearning.AI: Computer Use, Claude Code, MCP, Agent Skills.</div><span class="tool-url">deeplearning.ai</span></a>
+  </div>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- ════════════════════ CLAUDE CODE ════════════════════ -->
+<section class="section" id="code">
+  <div class="section-label neutral">In detail</div>
+  <h2>Claude Code</h2>
+  <p class="section-desc">Anthropic's agentic coding tool. Runs in terminal, IDE, desktop, and browser. Reads entire codebases, writes and tests code, manages Git, and coordinates sub-agents for complex projects.</p>
+
+  <!-- 3 OFFICIAL ANTHROPIC INFOGRAPHICS -->
+  <div class="infographic-row cols-3">
+    <div>
+      <img src="img-agent-loop.webp" alt="Claude Code agentic loop: Task → Language Model → Gather context, Formulate plan, Take action, Iterate" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">How Claude Code processes tasks</p>
+    </div>
+    <div>
+      <img src="img-github-mcp.webp" alt="GitHub MCP integration: Task + MCP Server → Claude Code → Read changes, Assess quality, Write report" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">MCP integration with GitHub</p>
+    </div>
+    <div>
+      <img src="img-tool-use.webp" alt="Tool use sequence: You → Coding Assistant → Language Model → ReadFile → Response" class="infographic-img" loading="lazy"/>
+      <p class="infographic-caption">Tool use and file operations</p>
+    </div>
+  </div>
+
+  <div class="tier-label"><span class="tier-dot official"></span> Official &amp; platform resources</div>
+  <div class="grid">
+    <a href="https://anthropic.skilljar.com/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude Code in Action</div><div class="card-desc">Official hands-on course: pair-programming, refactoring, testing, and Git integration. Certificate upon completion.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Certificate</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">Claude Code: A Highly Agentic Coding Assistant</div><div class="card-desc">Parallel sessions, CLAUDE.md configuration, Plan Mode, and managing context across long tasks. Co-developed with Anthropic.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.deeplearning.ai/short-courses/building-towards-computer-use-with-anthropic/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">Building Towards Computer Use</div><div class="card-desc">Taught by Colt Steele (Anthropic). From API fundamentals through tool use to a working computer use demonstration.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Claude Code Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md, Plan Mode, MCP, Git workflows, IDE setup, session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+
+  <!-- Creator tier -->
+  <div class="tier-community">
+    <div class="tier-label"><span class="tier-dot community"></span> Creator tutorials &amp; playbooks</div>
+    <div class="grid">
+      <a href="https://www.youtube.com/watch?v=eMZmDH3T2bY" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Kevin Stratvert</span></div><div class="card-title">Claude Code Tutorial for Beginners</div><div class="card-desc">Anthropic-sponsored. Installation, first app, existing codebase editing, CLAUDE.md as project memory.</div><div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Sponsored</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=iYiuzAsWnHU" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Alex Finn</span></div><div class="card-title">Claude Code Beginner Guide: 20 Minutes</div><div class="card-desc">Installation, core commands, Plan Mode, and a first small app.</div><div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">20 min</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=saggDHHnmtQ" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Nate Herk</span></div><div class="card-title">Master 95% of Claude Code in 36 Minutes</div><div class="card-desc">WAT framework, CLAUDE.md, Plan Mode, MCP, Skills. Builds a YouTube analytics automation.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">36 min</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=Ffh9OeJ7yxw" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Edmund Yong</span></div><div class="card-title">800+ Hours of Claude Code in 8 Minutes</div><div class="card-desc">Six core features, MCP server selection, parallel building, and avoiding common mistakes.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">8 min</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=sy65ARFI9Bg" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Ray Amjad</span></div><div class="card-title">My Claude Code Workflow for 2026</div><div class="card-desc">Senior dev workflow: video specs, model selection, parallel sessions, sub-agents.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+    </div>
+    <h3 class="sh3 mt">Written Guides</h3>
+    <div class="grid" style="margin-top:0.75rem;">
+      <a href="https://www.infoq.com/news/2026/01/claude-code-creator-workflow/" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">InfoQ</span></div><div class="card-title">Inside Claude Code's Creator Workflow</div><div class="card-desc">Interview with Boris Cherny (Anthropic): parallel instances, CLAUDE.md files, verification loops.</div><div class="card-bottom"><div class="tags"><span class="tag">Interview</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://codewithmukesh.com/blog/claude-code-for-beginners/" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Code with Mukesh</span></div><div class="card-title">Claude Code: Complete 2026 Guide</div><div class="card-desc">CLAUDE.md structure, Plan Mode, sub-agents, Skills, comparison with Copilot and Cursor.</div><div class="card-bottom"><div class="tags"><span class="tag">Technical</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.f22labs.com/blogs/10-claude-code-productivity-tips-for-every-developer/" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">F22 Labs</span></div><div class="card-title">10 Productivity Workflows for Claude Code</div><div class="card-desc">Prompt patterns, CLAUDE.md templates, quality gates, Plan Mode operational standards.</div><div class="card-bottom"><div class="tags"><span class="tag">Workflows</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ COWORK ════════════════════ -->
+<section class="section" id="cowork">
+  <div class="section-label neutral">In detail</div>
+  <h2>Cowork</h2>
+  <p class="section-desc">Claude's desktop agent for non-coding work. Runs multi-step tasks in sandboxed folders, coordinates sub-agents, and uses built-in skills for documents, spreadsheets, and presentations. macOS and Windows.</p>
+
+  <div class="tier-label"><span class="tier-dot official"></span> Official &amp; platform resources</div>
+  <div class="grid">
+    <a href="https://claude.com/blog/cowork-research-preview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Introducing Cowork (Official Announcement)</div><div class="card-desc">Product announcement: folder access, plugins, sub-agent coordination, safety model, architecture.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Claude Help Center</span></div><div class="card-title">Getting Started with Cowork</div><div class="card-desc">Official setup: folder permissions, task execution, progress monitoring, global and folder instructions.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Beginner</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.datacamp.com/tutorial/claude-cowork-tutorial" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">DataCamp</span></div><div class="card-title">Cowork Tutorial: Anthropic's Desktop Agent</div><div class="card-desc">File organization, batch conversions, report generation, document skills, browser automation.</div><div class="card-bottom"><div class="tags"><span class="tag">Platform</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/webinars/claude-in-excel-and-powerpoint" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Anthropic</span></div><div class="card-title">Webinar: Claude in Excel and PowerPoint</div><div class="card-desc">Official webinar with customer stories from RBC Capital Markets and D.E. Shaw on analyst-grade outputs.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Feb 2026</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+
+  <!-- Creator tier -->
+  <div class="tier-community">
+    <div class="tier-label"><span class="tier-dot community"></span> Creator tutorials &amp; playbooks</div>
+    <div class="grid">
+      <a href="https://www.youtube.com/watch?v=hkBKByC_DaY" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Mike Murphy</span></div><div class="card-title">How To Use Claude Cowork (Beginner's Guide)</div><div class="card-desc">Launching Cowork, choosing folders, renaming files in bulk, reviewing results.</div><div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=Bwqy0lsEaEg" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Alex Finn</span></div><div class="card-title">Cowork: Beginner to Expert in 18 Minutes</div><div class="card-desc">Organizing images, creating media kits, extracting data from statements, validating an app idea with a PRD.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">18 min</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=rdURhrS4xHI" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Alex Finn</span></div><div class="card-title">Cowork Is the Best AI Tool of 2026</div><div class="card-desc">Full day workflow: to-do lists, research, newsletter drafts, portfolio review, project tracking.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=vz6y5BaUQsc" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Tim Warner (MVP)</span></div><div class="card-title">Quick Guide to Claude Cowork</div><div class="card-desc">Professional use: social posts from YouTube metadata, Buffer exports, deck transformation with MCP.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.youtube.com/watch?v=rXP50V3AV_M" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Mark Kashef</span></div><div class="card-title">Cowork Masterclass for Beginners</div><div class="card-desc">Skills inside Cowork: live PowerPoint build, chaining skills, QA agents, parallel sub-agent coordination.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Feb 2026</span></div><span class="card-arrow">→</span></div></a>
+    </div>
+    <h3 class="sh3 mt">Written Guides</h3>
+    <div class="grid" style="margin-top:0.75rem;">
+      <a href="https://www.godofprompt.ai/blog/claude-cowork-complete-guide" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">GodOfPrompt</span></div><div class="card-title">Cowork: The Complete Guide</div><div class="card-desc">Setup, features, use cases, pricing, daily exercises. MCP connector walkthroughs.</div><div class="card-bottom"><div class="tags"><span class="tag">Complete</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://elephas.app/blog/claude-cowork-comprehensive-guide" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Elephas</span></div><div class="card-title">Cowork: Use Cases & Best Practices</div><div class="card-desc">Ten practical use cases, known limitations, benchmarking against alternative desktop agents.</div><div class="card-bottom"><div class="tags"><span class="tag">Comparison</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://www.reddit.com/r/ThinkingDeeplyAI/comments/1qldbso/mastering_the_claude_ecosystem_the_2026_handbook/" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Reddit</span></div><div class="card-title">Claude Ecosystem: 2026 Handbook</div><div class="card-desc">When to use Chat, Code, or Cowork. Building agent systems from their combination.</div><div class="card-bottom"><div class="tags"><span class="tag">Community</span><span class="tag">Ecosystem</span></div><span class="card-arrow">→</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ SKILLS ════════════════════ -->
+<section class="section section-warm" id="skills">
+  <div class="container">
+  <div class="section-label neutral">In detail</div>
+  <h2>Claude Skills</h2>
+  <p class="section-desc">Skills are folders with instructions, scripts, and resources that Claude loads dynamically when relevant. They turn Claude from a general assistant into a specialist for specific tasks. Available across Claude.ai, Claude Code, Cowork, and the API. Open standard since December 2025.</p>
+
+  <div class="concept-grid">
+    <a href="https://www.anthropic.com/news/skills" target="_blank" class="concept-card orange">
+      <div class="cc-title">Built-in Skills</div>
+      <div class="cc-desc">Claude ships with skills for Excel spreadsheets, PowerPoint presentations, Word documents, and fillable PDFs. These power the file creation feature in Claude.ai and Cowork.</div>
+      <span class="cc-link">anthropic.com → Introducing Agent Skills</span>
+    </a>
+    <a href="https://www.anthropic.com/news/skills" target="_blank" class="concept-card orange">
+      <div class="cc-title">Partner Skills</div>
+      <div class="cc-desc">Pre-built skills from Atlassian (Jira, Trello), Canva, Figma, Notion, Cloudflare, Stripe, Zapier, and more. Install from the directory and use immediately.</div>
+      <span class="cc-link">anthropic.com → Skills Partner Directory</span>
+    </a>
+    <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" class="concept-card orange">
+      <div class="cc-title">Custom Skills</div>
+      <div class="cc-desc">Build your own: create a SKILL.md file with instructions, add scripts and resources. Use the skill-creator skill to generate them. Share via version control or the marketplace.</div>
+      <span class="cc-link">anthropic.com/engineering → Building Agent Skills</span>
+    </a>
+    <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" class="concept-card orange">
+      <div class="cc-title">3-Level Loading</div>
+      <div class="cc-desc">Metadata scanned at startup (few tokens). Core instructions loaded when relevant. Nested resources loaded on demand. Context-efficient by design.</div>
+      <span class="cc-link">anthropic.com/engineering → Skills Architecture</span>
+    </a>
+  </div>
+
+  <div class="tier-label"><span class="tier-dot official"></span> Learn Skills</div>
+  <div class="grid">
+    <a href="https://www.anthropic.com/news/skills" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Introducing Agent Skills (Official Announcement)</div><div class="card-desc">Product launch and open standard: built-in skills, partner directory, organization-wide management, and cross-platform portability.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Dec 2025</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Equipping Agents with Agent Skills</div><div class="card-desc">Engineering deep-dive: folder architecture, SKILL.md specification, progressive disclosure, dynamic loading, and combining skills with MCP.</div><div class="card-bottom"><div class="tags"><span class="tag">Technical</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">Agent Skills with Anthropic</div><div class="card-desc">Hands-on course: SKILL.md format, deploying across Claude.ai, Claude Code, and the API. Building and combining custom skills with MCP servers.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">resources.anthropic.com</span></div><div class="card-title">The Complete Guide to Building Skills</div><div class="card-desc">Official PDF: folder structure, SKILL.md specification, progressive disclosure patterns, deployment across all Claude interfaces.</div><div class="card-bottom"><div class="tags"><span class="tag">PDF</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://github.com/anthropics/skills" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Anthropic Skills Repository</div><div class="card-desc">Official open-source skills: PDF, DOCX, XLSX, PPTX, and community examples. Fork, customize, and contribute.</div><div class="card-bottom"><div class="tags"><span class="tag">GitHub</span><span class="tag">Open Source</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://github.com/anthropics/anthropic-cookbook/tree/main/skills" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Skills Cookbook</div><div class="card-desc">Code examples and recipes: creating skills from scratch, testing, versioning, and integrating with the API's /v1/skills endpoint.</div><div class="card-bottom"><div class="tags"><span class="tag">Hands-on</span><span class="tag">Cookbook</span></div><span class="card-arrow">→</span></div></a>
+  </div>
+  </div>
+</section>
+
+<!-- ════════════════════ LEARNING PATH ════════════════════ -->
+<section class="section" id="path">
+  <div class="section-label neutral">Your journey</div>
+  <h2>7 Steps to Claude Fluency</h2>
+  <p class="section-desc">A clear sequence from first conversation to production agents. Each step builds on the one before. Click any step to explore resources and outcomes.</p>
+
+  <div class="j-progress">
+    <div class="j-pip l1"></div><div class="j-pip l1"></div><div class="j-pip l1"></div>
+    <div class="j-pip l2"></div><div class="j-pip l2"></div>
+    <div class="j-pip l3"></div><div class="j-pip l3"></div>
+  </div>
+
+  <div class="journey-steps">
+
+    <div class="j-step s1 active" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">1</div><div class="j-title">Understand how Claude works</div><div class="j-level">Use</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: You know what Claude can do, how it processes instructions, and how to structure your first conversations.</div>
+        <div class="j-links">
+          <a href="https://anthropic.skilljar.com/claude-101" target="_blank" class="j-link">Claude 101 (Academy, certificate)</a>
+          <a href="https://www.anthropic.com/learn/claude-for-you" target="_blank" class="j-link">AI Fluency Framework</a>
+          <a href="https://support.claude.com/en/collections/10548294-video-tutorials" target="_blank" class="j-link">Official video tutorials on Projects and Artifacts</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s1" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">2</div><div class="j-title">Master prompts and context engineering</div><div class="j-level">Use</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: You write structured prompts, manage context with Projects and CLAUDE.md, and understand how Claude processes information across sessions.</div>
+        <div class="j-links">
+          <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="j-link">Prompt Engineering Guide (Anthropic)</a>
+          <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="j-link">Interactive Tutorial (9 chapters, hands-on)</a>
+          <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="j-link">Context Engineering for AI Agents (Anthropic Engineering)</a>
+          <a href="https://code.claude.com/docs/en/memory" target="_blank" class="j-link">Managing Claude's Memory and CLAUDE.md</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s1" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">3</div><div class="j-title">Work with Cowork on your desktop</div><div class="j-level">Use</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: Claude runs multi-step tasks on your computer: organizing files, creating documents, building presentations, extracting data.</div>
+        <div class="j-links">
+          <a href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork" target="_blank" class="j-link">Getting Started with Cowork (official setup guide)</a>
+          <a href="https://www.datacamp.com/tutorial/claude-cowork-tutorial" target="_blank" class="j-link">Cowork Tutorial (DataCamp)</a>
+          <a href="https://www.anthropic.com/webinars/claude-in-excel-and-powerpoint" target="_blank" class="j-link">Webinar: Claude in Excel and PowerPoint (Anthropic)</a>
+          <a href="https://www.youtube.com/watch?v=Bwqy0lsEaEg" target="_blank" class="j-link">Alex Finn: Beginner to Expert in 18 Minutes</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s2" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">4</div><div class="j-title">Work with Claude Code</div><div class="j-level">Build</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: Claude reads your codebase, writes and tests code, manages Git, and runs as your pair-programming partner.</div>
+        <div class="j-links">
+          <a href="https://anthropic.skilljar.com/" target="_blank" class="j-link">Claude Code in Action (Academy, certificate)</a>
+          <a href="https://code.claude.com/docs/en/overview" target="_blank" class="j-link">Claude Code Documentation (complete reference)</a>
+          <a href="https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant/" target="_blank" class="j-link">DeepLearning.AI: Claude Code course (free)</a>
+          <a href="https://www.youtube.com/watch?v=eMZmDH3T2bY" target="_blank" class="j-link">Kevin Stratvert: Beginner Tutorial (Anthropic-sponsored)</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s2" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">5</div><div class="j-title">Build with the API</div><div class="j-level">Build</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: You integrate Claude programmatically into your own applications: endpoints, authentication, tool use, structured outputs.</div>
+        <div class="j-links">
+          <a href="https://anthropic.skilljar.com/" target="_blank" class="j-link">API Fundamentals (Academy, certificate)</a>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/overview" target="_blank" class="j-link">Features Overview: Build with Claude</a>
+          <a href="https://github.com/anthropics/courses" target="_blank" class="j-link">Anthropic Courses on GitHub (5 Jupyter Notebooks)</a>
+          <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" class="j-link">Prompting Best Practices for Claude 4.x</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s3" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">6</div><div class="j-title">Connect with MCP and Skills</div><div class="j-level">Agents</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: Claude accesses your data and tools through MCP. You package repeatable workflows as reusable skills and share them across your team.</div>
+        <div class="j-links">
+          <a href="https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/" target="_blank" class="j-link">DeepLearning.AI: MCP course (free)</a>
+          <a href="https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/" target="_blank" class="j-link">DeepLearning.AI: Agent Skills (free, Jan 2026)</a>
+          <a href="https://www.anthropic.com/news/skills" target="_blank" class="j-link">Agent Skills: Official Announcement & Open Standard</a>
+          <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" class="j-link">Engineering: Equipping Agents with Skills</a>
+          <a href="https://anthropic.skilljar.com/" target="_blank" class="j-link">Academy: MCP Getting Started + Advanced (2 courses)</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="j-step s3" onclick="toggleStep(this)">
+      <div class="j-header"><div class="j-num">7</div><div class="j-title">Design agent systems for production</div><div class="j-level">Agents</div><div class="j-toggle">&#9662;</div></div>
+      <div class="j-body"><div class="j-inner">
+        <div class="j-outcome">After this step: You architect multi-agent systems with the SDK, manage context at scale, and deploy through cloud infrastructure.</div>
+        <div class="j-links">
+          <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank" class="j-link">Agent SDK Documentation</a>
+          <a href="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf" target="_blank" class="j-link">The Complete Guide to Building Skills for Claude (PDF)</a>
+          <a href="https://www.deeplearning.ai/short-courses/building-towards-computer-use-with-anthropic/" target="_blank" class="j-link">DeepLearning.AI: Building Towards Computer Use</a>
+          <a href="https://anthropic.skilljar.com/" target="_blank" class="j-link">Academy: Claude on Bedrock and Vertex</a>
+        </div>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- end container for white sections -->
+
+<!-- ════════════════════ NETWORK ════════════════════ -->
+<section class="section section-warm" id="network">
+  <div class="container">
+  <div class="section-label neutral">Learning network</div>
+  <h2>People & Platforms</h2>
+  <p class="section-desc">Individuals, publications, and communities producing substantive work on Claude, AI systems, and applied workflows.</p>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">Anthropic Leadership & Core Team</h3>
+    <p class="network-cat-desc">People directly shaping Claude's development, safety architecture, and product direction.</p>
+    <div class="people-grid">
+      <a href="https://www.linkedin.com/in/dario-amodei-3934934/" target="_blank" class="person-card"><div class="person-name">Dario Amodei</div><div class="person-role">CEO & Co-Founder, Anthropic</div><div class="person-focus">AI safety, scaling policy, company vision</div></a>
+      <a href="https://www.linkedin.com/in/daniela-amodei/" target="_blank" class="person-card"><div class="person-name">Daniela Amodei</div><div class="person-role">President & Co-Founder, Anthropic</div><div class="person-focus">Operations, go-to-market, strategy</div></a>
+      <a href="https://www.linkedin.com/in/amanda-askell/" target="_blank" class="person-card"><div class="person-name">Amanda Askell</div><div class="person-role">Prompt Engineering Lead</div><div class="person-focus">Claude constitution, alignment, reasoning</div></a>
+      <a href="https://www.linkedin.com/in/margaretvo/" target="_blank" class="person-card"><div class="person-name">Maggie Vo</div><div class="person-role">Head of Technical Education & Enablement</div><div class="person-focus">Curriculum, prompt engineering, AI fluency</div></a>
+      <a href="https://www.linkedin.com/in/eschoppik/" target="_blank" class="person-card"><div class="person-name">Elie Schoppik</div><div class="person-role">Head of Technical Training</div><div class="person-focus">Official courses, live education, partnerships</div></a>
+      <a href="https://jack-clark.net/" target="_blank" class="person-card"><div class="person-name">Jack Clark</div><div class="person-role">Co-Founder, Anthropic</div><div class="person-focus">AI policy, Import AI newsletter</div></a>
+      <a href="https://www.linkedin.com/in/alex-albert/" target="_blank" class="person-card"><div class="person-name">Alex Albert</div><div class="person-role">Head of Claude Relations</div><div class="person-focus">Claude personality, prompt design, developer relations</div></a>
+      <a href="https://colah.github.io/" target="_blank" class="person-card"><div class="person-name">Chris Olah</div><div class="person-role">Co-Founder, Anthropic</div><div class="person-focus">Mechanistic interpretability, visualization</div></a>
+      <a href="https://www.linkedin.com/in/jared-kaplan-738164/" target="_blank" class="person-card"><div class="person-name">Jared Kaplan</div><div class="person-role">Co-Founder & Chief Scientist</div><div class="person-focus">Scaling laws, model architecture</div></a>
+      <a href="https://www.linkedin.com/in/jan-leike-49ab3494/" target="_blank" class="person-card"><div class="person-name">Jan Leike</div><div class="person-role">Alignment Lead</div><div class="person-focus">Superalignment, RLHF, safety research</div></a>
+    </div>
+  </div>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">Pioneers & Researchers</h3>
+    <p class="network-cat-desc">Scientists and educators who shaped the field of AI before the current wave. Their foundational work on learning, vision, fairness, and language made today's models possible.</p>
+    <div class="people-grid">
+      <a href="https://www.linkedin.com/in/andrewyng/" target="_blank" class="person-card"><div class="person-name">Andrew Ng</div><div class="person-role">Founder, DeepLearning.AI & Coursera</div><div class="person-focus">AI education at scale, Anthropic course partnerships</div></a>
+      <a href="https://profiles.stanford.edu/fei-fei-li" target="_blank" class="person-card"><div class="person-name">Fei-Fei Li</div><div class="person-role">Professor, Stanford HAI. Founder, World Labs</div><div class="person-focus">ImageNet, computer vision, human-centered AI</div></a>
+      <a href="https://www.linkedin.com/in/geoffrey-hinton-367a0/" target="_blank" class="person-card"><div class="person-name">Geoffrey Hinton</div><div class="person-role">Professor Emeritus, U of Toronto. Nobel Laureate 2024</div><div class="person-focus">Backpropagation, deep learning foundations</div></a>
+      <a href="https://www.linkedin.com/in/daphne-koller-73730/" target="_blank" class="person-card"><div class="person-name">Daphne Koller</div><div class="person-role">Co-Founder, Coursera. CEO, Insitro</div><div class="person-focus">Probabilistic ML, AI in biomedical research</div></a>
+      <a href="https://karpathy.ai/" target="_blank" class="person-card"><div class="person-name">Andrej Karpathy</div><div class="person-role">AI Researcher & Educator</div><div class="person-focus">Neural networks, LLM internals, technical education</div></a>
+      <a href="https://www.linkedin.com/in/demis-hassabis/" target="_blank" class="person-card"><div class="person-name">Demis Hassabis</div><div class="person-role">CEO, Google DeepMind. Nobel Laureate 2024</div><div class="person-focus">AlphaFold, reinforcement learning, AGI research</div></a>
+      <a href="https://www.linkedin.com/in/yann-lecun/" target="_blank" class="person-card"><div class="person-name">Yann LeCun</div><div class="person-role">Executive Chairman, AMI Labs. Turing Award 2018</div><div class="person-focus">Convolutional networks, self-supervised learning</div></a>
+      <a href="https://www.linkedin.com/in/yoshuabengio/" target="_blank" class="person-card"><div class="person-name">Yoshua Bengio</div><div class="person-role">Founder, MILA. Turing Award 2018</div><div class="person-focus">Deep learning theory, representation learning</div></a>
+      <a href="https://www.linkedin.com/in/joy-buolamwini-05505390/" target="_blank" class="person-card"><div class="person-name">Joy Buolamwini</div><div class="person-role">Founder, Algorithmic Justice League</div><div class="person-focus">Bias in AI, facial recognition, Coded Bias</div></a>
+      <a href="https://www.linkedin.com/in/kozyrkov/" target="_blank" class="person-card"><div class="person-name">Cassie Kozyrkov</div><div class="person-role">Former Chief Decision Scientist, Google</div><div class="person-focus">Decision intelligence, AI literacy, statistical thinking</div></a>
+      <a href="https://www.linkedin.com/in/ethanmollick/" target="_blank" class="person-card"><div class="person-name">Ethan Mollick</div><div class="person-role">Professor, Wharton. Author, Co-Intelligence</div><div class="person-focus">AI in work and education, organizational adoption</div></a>
+      <a href="https://www.linkedin.com/in/shreyashankar/" target="_blank" class="person-card"><div class="person-name">Shreya Shankar</div><div class="person-role">ML Researcher, UC Berkeley</div><div class="person-focus">LLM evaluation, data quality, production ML</div></a>
+    </div>
+  </div>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">Creators & Educators</h3>
+    <p class="network-cat-desc">People producing Claude tutorials, workflow demonstrations, and practical AI education across platforms.</p>
+    <div class="people-grid">
+      <a href="https://www.linkedin.com/in/alliekmiller/" target="_blank" class="person-card"><div class="person-name">Allie K. Miller</div><div class="person-role">AI Entrepreneur & Advisor</div><div class="person-focus">Enterprise AI strategy, leadership, education</div></a>
+      <a href="https://www.linkedin.com/in/ruben-hassid/" target="_blank" class="person-card"><div class="person-name">Ruben Hassid</div><div class="person-role">Creator, How to AI</div><div class="person-focus">Claude workflows, prompt systems, 285K+ subscribers</div></a>
+      <a href="https://www.linkedin.com/in/meganlieu/" target="_blank" class="person-card"><div class="person-name">Megan Lieu</div><div class="person-role">Developer Advocate & Creator</div><div class="person-focus">Claude Code, data science, AI tutorials</div></a>
+      <a href="https://www.linkedin.com/in/katelyn-bourgoin/" target="_blank" class="person-card"><div class="person-name">Katelyn Bourgoin</div><div class="person-role">Founder, Customer Camp</div><div class="person-focus">Buyer psychology, AI-assisted marketing</div></a>
+      <a href="https://www.linkedin.com/in/rowancheung/" target="_blank" class="person-card"><div class="person-name">Rowan Cheung</div><div class="person-role">Founder, The Rundown AI</div><div class="person-focus">Daily AI news, tool reviews</div></a>
+      <a href="https://www.linkedin.com/in/bentossell/" target="_blank" class="person-card"><div class="person-name">Ben Tossell</div><div class="person-role">Founder, Ben's Bites</div><div class="person-focus">AI products, startup tooling, builder community</div></a>
+      <a href="https://www.linkedin.com/in/anisha-jain/" target="_blank" class="person-card"><div class="person-name">Anisha Jain</div><div class="person-role">AI Educator & Content Creator</div><div class="person-focus">Claude applications, AI growth strategies</div></a>
+      <a href="https://www.linkedin.com/in/axellemalek/" target="_blank" class="person-card"><div class="person-name">Axelle Malek</div><div class="person-role">AI Content Creator, How to AI team</div><div class="person-focus">Daily AI updates, tool testing, accessible education</div></a>
+    </div>
+  </div>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">YouTube Channels</h3>
+    <p class="network-cat-desc">Video creators covering Claude tutorials, AI tools, and applied workflows.</p>
+    <div class="people-grid">
+      <a href="https://www.youtube.com/@amberfiglow" target="_blank" class="person-card"><div class="person-name">Amber Figlow</div><div class="person-role">YouTube</div><div class="person-focus">Claude tutorials, AI workflows</div></a>
+      <a href="https://www.youtube.com/@jordanharrod" target="_blank" class="person-card"><div class="person-name">Jordan Harrod</div><div class="person-role">PhD Researcher & YouTube</div><div class="person-focus">AI explainers, ethical AI, research</div></a>
+      <a href="https://www.youtube.com/@matthew_berman" target="_blank" class="person-card"><div class="person-name">Matthew Berman</div><div class="person-role">YouTube</div><div class="person-focus">AI model reviews, comparisons</div></a>
+      <a href="https://www.youtube.com/@raboratory" target="_blank" class="person-card"><div class="person-name">Riley Brown</div><div class="person-role">YouTube</div><div class="person-focus">AI agent builds, Claude Code</div></a>
+      <a href="https://www.youtube.com/@AllAboutAI" target="_blank" class="person-card"><div class="person-name">All About AI</div><div class="person-role">YouTube</div><div class="person-focus">AI tool reviews, practical tutorials</div></a>
+      <a href="https://www.youtube.com/@Fireship" target="_blank" class="person-card"><div class="person-name">Fireship</div><div class="person-role">YouTube</div><div class="person-focus">Fast-paced engineering, AI explainers</div></a>
+      <a href="https://www.youtube.com/@kevin_stratvert" target="_blank" class="person-card"><div class="person-name">Kevin Stratvert</div><div class="person-role">YouTube, Anthropic-sponsored</div><div class="person-focus">Claude Code and Cowork beginner tutorials</div></a>
+      <a href="https://www.youtube.com/@daboratory" target="_blank" class="person-card"><div class="person-name">Dave Ebbelaar</div><div class="person-role">YouTube</div><div class="person-focus">AI agents, Claude Code, production workflows</div></a>
+    </div>
+  </div>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">Newsletters</h3>
+    <p class="network-cat-desc">Curated reading for every level. Daily digests for beginners, strategic analysis for practitioners, technical depth for engineers.</p>
+    <div class="people-grid">
+      <a href="https://claude.com/newsletter/developers" target="_blank" class="person-card"><div class="person-name">Claude Developer Newsletter</div><div class="person-role">by Anthropic, monthly</div><div class="person-focus">Official: Feature updates, technical insights, best practices</div></a>
+      <a href="https://www.superhuman.ai/" target="_blank" class="person-card"><div class="person-name">Superhuman AI</div><div class="person-role">Daily, 3 min read</div><div class="person-focus">Beginner: AI news, trends, tools. 1M+ readers</div></a>
+      <a href="https://www.therundown.ai/" target="_blank" class="person-card"><div class="person-name">The Rundown AI</div><div class="person-role">by Rowan Cheung</div><div class="person-focus">Beginner: Daily AI news, actionable tips</div></a>
+      <a href="https://ruben.substack.com/" target="_blank" class="person-card"><div class="person-name">How to AI</div><div class="person-role">by Ruben Hassid</div><div class="person-focus">Beginner: Step-by-step Claude tutorials</div></a>
+      <a href="https://bensbites.beehiiv.com/" target="_blank" class="person-card"><div class="person-name">Ben's Bites</div><div class="person-role">by Ben Tossell</div><div class="person-focus">Beginner to Intermediate: AI product news, use cases</div></a>
+      <a href="https://www.oneusefulthing.org/" target="_blank" class="person-card"><div class="person-name">One Useful Thing</div><div class="person-role">by Ethan Mollick</div><div class="person-focus">Intermediate: AI in work and education, adoption</div></a>
+      <a href="https://www.deeplearning.ai/the-batch/" target="_blank" class="person-card"><div class="person-name">The Batch</div><div class="person-role">by Andrew Ng, DeepLearning.AI</div><div class="person-focus">Intermediate: Weekly AI research and applications</div></a>
+      <a href="https://www.lennysnewsletter.com/" target="_blank" class="person-card"><div class="person-name">Lenny's Newsletter</div><div class="person-role">by Lenny Rachitsky</div><div class="person-focus">Intermediate: Product management, AI in growth</div></a>
+      <a href="https://www.latent.space/" target="_blank" class="person-card"><div class="person-name">Latent Space</div><div class="person-role">by swyx & Alessio Fanelli</div><div class="person-focus">Advanced: AI engineering, agents, infrastructure</div></a>
+      <a href="https://alphasignal.ai/" target="_blank" class="person-card"><div class="person-name">AlphaSignal</div><div class="person-role">Weekly, 200K+ developers</div><div class="person-focus">Advanced: Research papers, GitHub repos, ML trends</div></a>
+      <a href="https://importai.substack.com/" target="_blank" class="person-card"><div class="person-name">Import AI</div><div class="person-role">by Jack Clark (Anthropic Co-Founder)</div><div class="person-focus">Advanced: AI policy, research, safety</div></a>
+    </div>
+  </div>
+
+  <div class="network-category">
+    <h3 class="network-cat-title">Platforms & Communities</h3>
+    <p class="network-cat-desc">Official documentation, learning platforms, open-source repositories, and community spaces.</p>
+    <div class="tools-grid">
+      <a href="https://anthropic.skilljar.com/" target="_blank" class="tool-card"><div class="tool-name">Anthropic Academy</div><div class="tool-desc">Free courses with certificates: Claude 101, API, Code, MCP.</div><span class="tool-url">anthropic.skilljar.com</span></a>
+      <a href="https://docs.anthropic.com" target="_blank" class="tool-card"><div class="tool-name">Anthropic Documentation</div><div class="tool-desc">Complete API reference, guides, and model specs.</div><span class="tool-url">docs.anthropic.com</span></a>
+      <a href="https://support.claude.com" target="_blank" class="tool-card"><div class="tool-name">Claude Help Center</div><div class="tool-desc">Product guides, video tutorials, troubleshooting.</div><span class="tool-url">support.claude.com</span></a>
+      <a href="https://www.anthropic.com/news" target="_blank" class="tool-card"><div class="tool-name">Anthropic Blog</div><div class="tool-desc">Product announcements, research, engineering posts.</div><span class="tool-url">anthropic.com/news</span></a>
+      <a href="https://github.com/anthropics" target="_blank" class="tool-card"><div class="tool-name">Anthropic GitHub</div><div class="tool-desc">Official repos: courses, SDK, Claude Code, MCP servers.</div><span class="tool-url">github.com/anthropics</span></a>
+      <a href="https://github.com/modelcontextprotocol/servers" target="_blank" class="tool-card"><div class="tool-name">MCP Server Directory</div><div class="tool-desc">Reference servers, community integrations, examples.</div><span class="tool-url">github.com/modelcontextprotocol</span></a>
+      <a href="https://www.deeplearning.ai/courses/?courses_date_desc%5BrefinementList%5D%5Bpartnership%5D%5B0%5D=Anthropic" target="_blank" class="tool-card"><div class="tool-name">DeepLearning.AI Courses</div><div class="tool-desc">Co-developed: MCP, Claude Code, Agent Skills.</div><span class="tool-url">deeplearning.ai</span></a>
+      <a href="https://www.coursera.org/partners/anthropic" target="_blank" class="tool-card"><div class="tool-name">Coursera Anthropic</div><div class="tool-desc">Certified specializations and career paths.</div><span class="tool-url">coursera.org</span></a>
+      <a href="https://huggingface.co/anthropic" target="_blank" class="tool-card"><div class="tool-name">Hugging Face</div><div class="tool-desc">Model cards, community models, open research.</div><span class="tool-url">huggingface.co/anthropic</span></a>
+      <a href="https://www.reddit.com/r/ClaudeAI/" target="_blank" class="tool-card"><div class="tool-name">r/ClaudeAI</div><div class="tool-desc">450K+ members. Tips, workflows, troubleshooting.</div><span class="tool-url">reddit.com/r/ClaudeAI</span></a>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ════════════════════ PHILOSOPHY ════════════════════ -->
+<div class="philosophy">
+  <div class="container">
+    <div class="philosophy-inner">
+      <h3>Why this page exists</h3>
+      <p>The best investment you can make is in your own ability to learn, build, and create. In developing the skill to work with the right tools directly and to shape them around what you actually need.</p>
+      <p>This page curates what already exists so you spend less time searching and more time building. Every resource is free. Every link goes to a primary source. The goal is tailored skill, applied knowledge, and real capability you own.</p>
+      <p style="margin-top:1rem;font-size:0.82rem;color:var(--text-tertiary);">Know a resource that belongs here? Think something is outdated or missing? <a href="mailto:hello@buildersandcreatives.com" style="color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">We welcome your feedback</a>. This page gets better with every suggestion.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>Made by <a href="https://www.linkedin.com/in/sara-kukovec/" target="_blank">Sara Kukovec</a> · Curated with care by <a href="https://builders-creatives.com" target="_blank">Builders</a></p>
+    <p>February 2026 · All resources link to their original sources · Independently curated, community-driven</p>
+    <p style="margin-top: 0.75rem;"><a href="https://www.anthropic.com/learn" target="_blank">Anthropic Academy</a> · <a href="#ecosystem">Tools</a> · <a href="#code">Claude Code</a> · <a href="#cowork">Cowork</a> · <a href="#path">Learning Path</a> · <a href="#network">Network</a></p>
+  </div>
+</footer>
+
+</main>
+
+<script>
+function go(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleStep(el) {
+  const wasActive = el.classList.contains('active');
+  el.classList.toggle('active');
+  // Update progress pips
+  const pips = document.querySelectorAll('.j-pip');
+  const steps = document.querySelectorAll('.j-step');
+  steps.forEach((s, i) => {
+    if (s.classList.contains('active') && pips[i]) {
+      const lvl = s.classList.contains('s1') ? 'l1' : s.classList.contains('s2') ? 'l2' : 'l3';
+      pips[i].className = 'j-pip ' + lvl;
+    } else if (pips[i]) {
+      pips[i].className = 'j-pip';
+    }
+  });
+}
+const secs = document.querySelectorAll('.section');
+const links = document.querySelectorAll('.nav-link');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const id = entry.target.id;
+      const match = document.querySelector(`.nav-link[onclick*="${id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { rootMargin: '-80px 0px -65% 0px' });
+secs.forEach(s => obs.observe(s));
+
+const cards = document.querySelectorAll('.card, .tool-card, .person-card');
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; cObs.unobserve(e.target); }
+  });
+}, { threshold: 0.05 });
+cards.forEach((c, i) => {
+  c.style.opacity = '0'; c.style.transform = 'translateY(8px)';
+  c.style.transition = `opacity 0.4s ease ${(i % 3) * 0.06}s, transform 0.4s ease ${(i % 3) * 0.06}s`;
+  cObs.observe(c);
+});
+</script>
+</body>
+</html>
