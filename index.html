@@ -263,7 +263,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 <header class="header">
   <div class="container">
     <div class="header-inner">
-      <div class="header-badge"><span class="dot"></span> Curated · February 2026</div>
+      <div class="header-badge"><span class="dot"></span> Curated · March 2026</div>
       <h1>Learn Claude</h1>
       <p>One page to learn everything Claude can do. Courses, tools, tutorials, and people, structured by skill level and linked to primary sources.</p>
       <p class="sub">Built because the best resources exist. They're just spread across too many platforms.</p>
@@ -274,7 +274,29 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
         <div class="header-meta-item"><span class="val">3</span><span class="lbl">Skill levels</span></div>
         <div class="header-meta-item"><span class="val">Free</span><span class="lbl">Every resource</span></div>
       </div>
-      <a href="https://www.anthropic.com/learn" target="_blank" class="cta-link">Start at Anthropic Academy →</a>
+      <!-- EMAIL CTA HEADER -->
+      <div style="margin-top:2rem;padding:1.75rem 2rem;background:var(--clay-light);border:1px solid var(--clay-border);border-radius:var(--radius-lg);max-width:600px;">
+        <p style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;letter-spacing:-0.02em;line-height:1.2;">Nobody prepared you for this.</p>
+        <p style="font-family:var(--font-serif);font-size:0.95rem;font-weight:600;font-style:italic;color:var(--text);margin-bottom:0.75rem;">Me neither.</p>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.25rem;">I'm Sara. Founder, engineer, builder. I dig into AI and tech every day in my own companies. I spend the hours most founders don't have.</p>
+        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+        <form action="https://app.kit.com/forms/9162909/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9162909" data-uid="964072ed69" data-format="inline" data-version="5" min-width="400 500 600 700 800" style="margin:0;">
+          <div data-style="clean">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0;">
+              <div class="formkit-field" style="flex:1 0 180px;margin:0;">
+                <input class="formkit-input" name="email_address" style="width:100%;padding:0.65rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:0.85rem;background:#fff;color:var(--text);outline:none;" aria-label="Email Address" placeholder="your@email.com" required="" type="email">
+              </div>
+              <button data-element="submit" class="formkit-submit" style="padding:0.65rem 1.25rem;background:var(--sage);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:0.82rem;font-weight:600;cursor:pointer;white-space:nowrap;margin:0;">
+                <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                <span>Build with me →</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        <p style="font-size:0.7rem;color:var(--text-faint);margin-top:0.5rem;font-family:var(--font-mono);">Only when it's worth your time.</p>
+      </div>
+      <a href="https://www.anthropic.com/learn" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:1.5rem;padding:0.65rem 1.25rem;border:1px solid var(--clay);border-radius:var(--radius);font-size:0.82rem;font-weight:500;color:var(--clay);text-decoration:none;" onmouseover="this.style.background='var(--clay)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--clay)'">Start at Anthropic Academy →</a>
     </div>
   </div>
 </header>
@@ -457,7 +479,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   <div class="grid">
     <a href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Anthropic API Fundamentals</div><div class="card-desc">Structured introduction to the Claude API: endpoint architecture, request formatting, authentication, response handling, and operational best practices.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span><span class="tag">API</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude Code in Action</div><div class="card-desc">Pair-programming patterns, automated refactoring, test generation, and Git workflow management. Official certificate.</div><div class="card-bottom"><div class="tags"><span class="tag">Free</span><span class="tag">Certificate</span><span class="tag">Code</span></div><span class="card-arrow">→</span></div></a>
-    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Claude Code: Official Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md configuration, MCP server integration, Git workflows, IDE setup, and session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Terminal</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Claude Code: Official Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md configuration, MCP server integration, Git workflows, IDE setup, and session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Terminal</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://docs.anthropic.com/en/docs/build-with-claude/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Features Overview: Build with Claude</div><div class="card-desc">Technical overview: tool use, file handling, citations, batch processing, structured outputs, streaming, vision, and PDF support.</div><div class="card-bottom"><div class="tags"><span class="tag">Complete</span><span class="tag">API</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://github.com/anthropics/courses" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Anthropic Courses (GitHub Repo)</div><div class="card-desc">5 official Jupyter Notebook courses: API Fundamentals, Prompt Engineering, Real World Prompting, Evaluations, Tool Use.</div><div class="card-bottom"><div class="tags"><span class="tag">Jupyter</span><span class="tag">Hands-on</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://github.com/anthropics/anthropic-cookbook" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">GitHub · Anthropic</span></div><div class="card-title">Anthropic Cookbook</div><div class="card-desc">Code recipes for common workflows: tool use patterns, multi-turn conversations, structured outputs, citations, embeddings, RAG, and more.</div><div class="card-bottom"><div class="tags"><span class="tag">Hands-on</span><span class="tag">Cookbook</span></div><span class="card-arrow">→</span></div></a>
@@ -556,7 +578,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
       <div class="cp-desc">The critical evolution: managing the full context window, not just one prompt. CLAUDE.md for persistent project knowledge. Compaction to summarize and re-start cleanly. Just-in-time retrieval over upfront loading. As context fills past 50%, accuracy degrades.</div>
       <div class="cp-links">
         <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="cp-link">Context Engineering for Agents (Anthropic)</a>
-        <a href="https://code.claude.com/docs/en/memory" target="_blank" class="cp-link">CLAUDE.md & Memory hierarchy</a>
+        <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/memory" target="_blank" class="cp-link">CLAUDE.md & Memory hierarchy</a>
         <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="cp-link">Claude Code Best Practices</a>
         <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" class="cp-link">Harnesses for Long-Running Agents</a>
       </div>
@@ -581,7 +603,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
     <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Context Engineering for AI Agents</div><div class="card-desc">The definitive article: compaction strategies, just-in-time retrieval, tool search patterns, sub-agent isolation, and context budget management.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Prompt Engineering Guide</div><div class="card-desc">The foundation: clear instructions, XML structuring, chain-of-thought reasoning, few-shot examples, role-based system prompts, output formatting.</div><div class="card-bottom"><div class="tags"><span class="tag">Essential</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Effective Harnesses for Long-Running Agents</div><div class="card-desc">Multi-context-window workflows: initializer agents, progress files, incremental development, and bridging sessions across compactions.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Engineering</span></div><span class="card-arrow">→</span></div></a>
-    <a href="https://code.claude.com/docs/en/memory" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Manage Claude's Memory</div><div class="card-desc">CLAUDE.md hierarchy, auto memory, rules directories, CLAUDE.local.md, project memory structure, imports, and the 200-line entrypoint.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Memory</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/memory" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">code.claude.com</span></div><div class="card-title">Manage Claude's Memory</div><div class="card-desc">CLAUDE.md hierarchy, auto memory, rules directories, CLAUDE.local.md, project memory structure, imports, and the 200-line entrypoint.</div><div class="card-bottom"><div class="tags"><span class="tag">Reference</span><span class="tag">Memory</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">docs.anthropic.com</span></div><div class="card-title">Claude 4.x Prompting Best Practices</div><div class="card-desc">Model-specific techniques: adaptive thinking, extended thinking guidance, vision optimization, context-aware output control.</div><div class="card-bottom"><div class="tags"><span class="tag">Current</span><span class="tag">Claude 4.x</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">anthropic.com/engineering</span></div><div class="card-title">Claude Code Best Practices</div><div class="card-desc">CLAUDE.md configuration, slash commands, hooks, MCP integration, sub-agents, and practical context management patterns.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Practical</span></div><span class="card-arrow">→</span></div></a>
   </div>
@@ -633,7 +655,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 
   <div class="tools-grid">
     <a href="https://claude.ai" target="_blank" class="tool-card"><div class="tool-name">Claude.ai</div><div class="tool-desc">Chat interface. Projects, Artifacts, Memory, Web Search, file creation.</div><span class="tool-url">claude.ai</span></a>
-    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="tool-card"><div class="tool-name">Claude Code</div><div class="tool-desc">Agentic coding in terminal, IDE, desktop, and browser. Reads codebases, writes code, runs tests.</div><span class="tool-url">code.claude.com</span></a>
+    <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/overview" target="_blank" class="tool-card"><div class="tool-name">Claude Code</div><div class="tool-desc">Agentic coding in terminal, IDE, desktop, and browser. Reads codebases, writes code, runs tests.</div><span class="tool-url">code.claude.com</span></a>
     <a href="https://claude.com/product/cowork" target="_blank" class="tool-card"><div class="tool-name">Cowork</div><div class="tool-desc">Desktop agent for non-coding tasks. File access, multi-step execution, plugins, MCP connectors.</div><span class="tool-url">claude.com/product/cowork</span></a>
     <a href="https://www.anthropic.com/news/claude-for-chrome" target="_blank" class="tool-card"><div class="tool-name">Claude in Chrome</div><div class="tool-desc">Browser agent. Reads pages, navigates sites, fills forms, automates multi-tab workflows.</div><span class="tool-url">anthropic.com</span></a>
     <a href="https://claude.com/claude-in-excel" target="_blank" class="tool-card"><div class="tool-name">Claude in Excel</div><div class="tool-desc">Spreadsheet agent. Multi-tab workbooks, formula debugging, pivot tables, conditional formatting.</div><span class="tool-url">claude.com/claude-in-excel</span></a>
@@ -653,6 +675,18 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 <div class="container">
 
 <!-- ════════════════════ CLAUDE CODE ════════════════════ -->
+<!-- ═══ MODEL UPDATE CALLOUT ═══ -->
+<div style="background:var(--clay-light);border:1px solid var(--clay-border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:2rem;">
+  <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);margin-bottom:0.5rem;">February 2026 · Model Update</div>
+  <p style="font-size:0.88rem;color:var(--text);font-weight:600;margin-bottom:0.4rem;">Two new models just landed: Opus 4.6 &amp; Sonnet 4.6</p>
+  <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;">Sonnet 4.6 (Feb 17) is now the default on claude.ai — Opus-level quality at Sonnet price ($3/$15 per 1M tokens). Opus 4.6 (Feb 5) adds Agent Teams, Claude in PowerPoint, and a 1M token context window. Both include adaptive thinking and major improvements in computer use and coding.</p>
+  <div style="margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+    <a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" style="font-size:0.78rem;color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">Sonnet 4.6 announcement →</a>
+    <a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" style="font-size:0.78rem;color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">Opus 4.6 announcement →</a>
+    <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" style="font-size:0.78rem;color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">All models overview →</a>
+  </div>
+</div>
+
 <section class="section" id="code">
   <div class="section-label neutral">In detail</div>
   <h2>Claude Code</h2>
@@ -679,7 +713,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
     <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">Anthropic Academy</span></div><div class="card-title">Claude Code in Action</div><div class="card-desc">Official hands-on course: pair-programming, refactoring, testing, and Git integration. Certificate upon completion.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Certificate</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">Claude Code: A Highly Agentic Coding Assistant</div><div class="card-desc">Parallel sessions, CLAUDE.md configuration, Plan Mode, and managing context across long tasks. Co-developed with Anthropic.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.deeplearning.ai/short-courses/building-towards-computer-use-with-anthropic/" target="_blank" class="card"><div class="card-top"><span class="badge badge-course">Course</span><span class="card-source">DeepLearning.AI</span></div><div class="card-title">Building Towards Computer Use</div><div class="card-desc">Taught by Colt Steele (Anthropic). From API fundamentals through tool use to a working computer use demonstration.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
-    <a href="https://code.claude.com/docs/en/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Claude Code Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md, Plan Mode, MCP, Git workflows, IDE setup, session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/overview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Claude Code Documentation</div><div class="card-desc">Complete reference: installation, CLAUDE.md, Plan Mode, MCP, Git workflows, IDE setup, session management.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Reference</span></div><span class="card-arrow">→</span></div></a>
   </div>
 
   <!-- Creator tier -->
@@ -691,6 +725,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
       <a href="https://www.youtube.com/watch?v=saggDHHnmtQ" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Nate Herk</span></div><div class="card-title">Master 95% of Claude Code in 36 Minutes</div><div class="card-desc">WAT framework, CLAUDE.md, Plan Mode, MCP, Skills. Builds a YouTube analytics automation.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">36 min</span></div><span class="card-arrow">→</span></div></a>
       <a href="https://www.youtube.com/watch?v=Ffh9OeJ7yxw" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Edmund Yong</span></div><div class="card-title">800+ Hours of Claude Code in 8 Minutes</div><div class="card-desc">Six core features, MCP server selection, parallel building, and avoiding common mistakes.</div><div class="card-bottom"><div class="tags"><span class="tag">Intermediate</span><span class="tag">8 min</span></div><span class="card-arrow">→</span></div></a>
       <a href="https://www.youtube.com/watch?v=sy65ARFI9Bg" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Ray Amjad</span></div><div class="card-title">My Claude Code Workflow for 2026</div><div class="card-desc">Senior dev workflow: video specs, model selection, parallel sessions, sub-agents.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
+            <a href="https://www.sabrina.dev/p/claude-code-full-course-for-beginners" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Guide</span><span class="card-source">Sabrina Ramonov</span></div><div class="card-title">Ultimate Claude Code Full Course (Free)</div><div class="card-desc">90-minute deep dive: Skills, quality gate hooks, brand voice, parallel sub-agents. Build a full AI marketing officer from scratch.</div><div class="card-bottom"><div class="tags"><span class="tag">Advanced</span><span class="tag">Feb 2026</span></div><span class="card-arrow">→</span></div></a>
     </div>
     <h3 class="sh3 mt">Written Guides</h3>
     <div class="grid" style="margin-top:0.75rem;">
@@ -710,7 +745,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   <div class="tier-label"><span class="tier-dot official"></span> Official &amp; platform resources</div>
   <div class="grid">
     <a href="https://claude.com/blog/cowork-research-preview" target="_blank" class="card"><div class="card-top"><span class="badge badge-docs">Docs</span><span class="card-source">Anthropic</span></div><div class="card-title">Introducing Cowork (Official Announcement)</div><div class="card-desc">Product announcement: folder access, plugins, sub-agent coordination, safety model, architecture.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Jan 2026</span></div><span class="card-arrow">→</span></div></a>
-    <a href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Claude Help Center</span></div><div class="card-title">Getting Started with Cowork</div><div class="card-desc">Official setup: folder permissions, task execution, progress monitoring, global and folder instructions.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Beginner</span></div><span class="card-arrow">→</span></div></a>
+    <a href="https://support.claude.com/en/articles/13345190-get-started-with-cowork" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Claude Help Center</span></div><div class="card-title">Getting Started with Cowork</div><div class="card-desc">Official setup: folder permissions, task execution, progress monitoring, global and folder instructions.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Beginner</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.datacamp.com/tutorial/claude-cowork-tutorial" target="_blank" class="card"><div class="card-top"><span class="badge badge-tutorial">Tutorial</span><span class="card-source">DataCamp</span></div><div class="card-title">Cowork Tutorial: Anthropic's Desktop Agent</div><div class="card-desc">File organization, batch conversions, report generation, document skills, browser automation.</div><div class="card-bottom"><div class="tags"><span class="tag">Platform</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
     <a href="https://www.anthropic.com/webinars/claude-in-excel-and-powerpoint" target="_blank" class="card"><div class="card-top"><span class="badge badge-video">Video</span><span class="card-source">Anthropic</span></div><div class="card-title">Webinar: Claude in Excel and PowerPoint</div><div class="card-desc">Official webinar with customer stories from RBC Capital Markets and D.E. Shaw on analyst-grade outputs.</div><div class="card-bottom"><div class="tags"><span class="tag">Official</span><span class="tag">Feb 2026</span></div><span class="card-arrow">→</span></div></a>
   </div>
@@ -728,7 +763,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
     <h3 class="sh3 mt">Written Guides</h3>
     <div class="grid" style="margin-top:0.75rem;">
       <a href="https://www.godofprompt.ai/blog/claude-cowork-complete-guide" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">GodOfPrompt</span></div><div class="card-title">Cowork: The Complete Guide</div><div class="card-desc">Setup, features, use cases, pricing, daily exercises. MCP connector walkthroughs.</div><div class="card-bottom"><div class="tags"><span class="tag">Complete</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
-      <a href="https://elephas.app/blog/claude-cowork-comprehensive-guide" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Elephas</span></div><div class="card-title">Cowork: Use Cases & Best Practices</div><div class="card-desc">Ten practical use cases, known limitations, benchmarking against alternative desktop agents.</div><div class="card-bottom"><div class="tags"><span class="tag">Comparison</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+      <a href="https://claudiaplusai.substack.com/p/claude-cowork-starter-guide-30-examples" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Claudia+AI</span></div><div class="card-title">Cowork: Starter Guide + 30 Examples</div><div class="card-desc">30 real-world prompts and workflows for Cowork, from receipts to research reports to file organization.</div><div class="card-bottom"><div class="tags"><span class="tag">Comparison</span><span class="tag">2026</span></div><span class="card-arrow">→</span></div></a>
+            <a href="https://ccforeveryone.com/cowork" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">CC for Everyone</span></div><div class="card-title">Cowork Complete Guide — Learn Inside Cowork</div><div class="card-desc">12 interactive lessons taught by Claude inside Cowork itself. Download the folder, open in Cowork, and Claude teaches you by doing real tasks together.</div><div class="card-bottom"><div class="tags"><span class="tag">Beginner</span><span class="tag">Free</span></div><span class="card-arrow">→</span></div></a>
       <a href="https://www.reddit.com/r/ThinkingDeeplyAI/comments/1qldbso/mastering_the_claude_ecosystem_the_2026_handbook/" target="_blank" class="card"><div class="card-top"><span class="badge badge-guide">Guide</span><span class="card-source">Reddit</span></div><div class="card-title">Claude Ecosystem: 2026 Handbook</div><div class="card-desc">When to use Chat, Code, or Cowork. Building agent systems from their combination.</div><div class="card-bottom"><div class="tags"><span class="tag">Community</span><span class="tag">Ecosystem</span></div><span class="card-arrow">→</span></div></a>
     </div>
   </div>
@@ -838,7 +874,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
           <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="j-link">Prompt Engineering Guide (Anthropic)</a>
           <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="j-link">Interactive Tutorial (9 chapters, hands-on)</a>
           <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" class="j-link">Context Engineering for AI Agents (Anthropic Engineering)</a>
-          <a href="https://code.claude.com/docs/en/memory" target="_blank" class="j-link">Managing Claude's Memory and CLAUDE.md</a>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/memory" target="_blank" class="j-link">Managing Claude's Memory and CLAUDE.md</a>
         </div>
       </div></div>
     </div>
@@ -848,7 +884,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
       <div class="j-body"><div class="j-inner">
         <div class="j-outcome">After this step: Claude runs multi-step tasks on your computer: organizing files, creating documents, building presentations, extracting data.</div>
         <div class="j-links">
-          <a href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork" target="_blank" class="j-link">Getting Started with Cowork (official setup guide)</a>
+          <a href="https://support.claude.com/en/articles/13345190-get-started-with-cowork" target="_blank" class="j-link">Getting Started with Cowork (official setup guide)</a>
           <a href="https://www.datacamp.com/tutorial/claude-cowork-tutorial" target="_blank" class="j-link">Cowork Tutorial (DataCamp)</a>
           <a href="https://www.anthropic.com/webinars/claude-in-excel-and-powerpoint" target="_blank" class="j-link">Webinar: Claude in Excel and PowerPoint (Anthropic)</a>
           <a href="https://www.youtube.com/watch?v=Bwqy0lsEaEg" target="_blank" class="j-link">Alex Finn: Beginner to Expert in 18 Minutes</a>
@@ -862,7 +898,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
         <div class="j-outcome">After this step: Claude reads your codebase, writes and tests code, manages Git, and runs as your pair-programming partner.</div>
         <div class="j-links">
           <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" class="j-link">Claude Code in Action (Academy, certificate)</a>
-          <a href="https://code.claude.com/docs/en/overview" target="_blank" class="j-link">Claude Code Documentation (complete reference)</a>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/claude-code/overview" target="_blank" class="j-link">Claude Code Documentation (complete reference)</a>
           <a href="https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant/" target="_blank" class="j-link">DeepLearning.AI: Claude Code course (free)</a>
           <a href="https://www.youtube.com/watch?v=eMZmDH3T2bY" target="_blank" class="j-link">Kevin Stratvert: Beginner Tutorial (Anthropic-sponsored)</a>
         </div>
@@ -1034,14 +1070,45 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   </div>
 </section>
 
-<!-- ════════════════════ PHILOSOPHY ════════════════════ -->
+<!-- PHILOSOPHY / CTA BOTTOM -->
 <div class="philosophy">
   <div class="container">
     <div class="philosophy-inner">
-      <h3>Why this page exists</h3>
-      <p>The best investment you can make is in your own ability to learn, build, and create. In developing the skill to work with the right tools directly and to shape them around what you actually need.</p>
-      <p>This page curates what already exists so you spend less time searching and more time building. Every resource is free. Every link goes to a primary source. The goal is tailored skill, applied knowledge, and real capability you own.</p>
-      <p style="margin-top:1rem;font-size:0.82rem;color:var(--text-tertiary);">Know a resource that belongs here? Something outdated or missing? <a href="https://www.linkedin.com/in/sara-kukovec/" target="_blank" style="color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">Let me know on LinkedIn</a>. This page grows with your input.</p>
+      <h3 style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin-bottom:1rem;">Nobody prepared you for this.</h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:2;margin-bottom:1.25rem;">
+        Leading people. Building something from nothing.<br>
+        Getting others to believe what you believe.<br>
+        Learning before you've mastered what came before.<br>
+        Making decisions nobody else can make.
+      </p>
+      <p style="font-family:var(--font-serif);font-size:1.05rem;font-weight:600;font-style:italic;color:var(--text);margin-bottom:1.5rem;">Me neither.</p>
+      <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.85;margin-bottom:0.5rem;padding-left:1rem;border-left:2px solid var(--clay-border);">
+        <strong style="color:var(--text);font-weight:600;">I'm Sara. Founder, engineer, builder.</strong><br>
+        I dig into AI and tech every day in my own companies.<br>
+        I only share what I've built and tested myself.<br>
+        I spend the hours most founders don't have.
+      </p>
+      <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.85;margin-bottom:2rem;">
+        Your time doesn't come back.<br>
+        I know what it costs to open one more email.<br>
+        I make sure it's worth it.
+      </p>
+      <form action="https://app.kit.com/forms/9162909/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9162909" data-uid="964072ed69" data-format="inline" data-version="5" min-width="400 500 600 700 800" style="margin:0;">
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0;">
+            <div class="formkit-field" style="flex:1 0 200px;margin:0;">
+              <input class="formkit-input" name="email_address" style="width:100%;padding:0.7rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:0.88rem;background:#fff;color:var(--text);outline:none;" aria-label="Email Address" placeholder="your@email.com" required="" type="email">
+            </div>
+            <button data-element="submit" class="formkit-submit" style="padding:0.7rem 1.4rem;background:var(--sage);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:0.85rem;font-weight:600;cursor:pointer;white-space:nowrap;margin:0;">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Build with me →</span>
+            </button>
+          </div>
+        </div>
+      </form>
+      <p style="font-size:0.7rem;color:var(--text-faint);margin-top:0.6rem;font-family:var(--font-mono);">Only when it's worth your time.</p>
+      <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--text-tertiary);">Know a resource that belongs here? <a href="https://www.linkedin.com/in/sara-kukovec/" target="_blank" style="color:var(--clay);text-decoration:none;border-bottom:1px solid var(--clay-border);">Let me know on LinkedIn</a>.</p>
     </div>
   </div>
 </div>
